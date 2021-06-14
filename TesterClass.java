@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class TestClass here.
+ * Write a description of class TesterClass here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Tester
+public class TesterClass
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class TestClass
+     * Constructor for objects of class TesterClass
      */
-    public Tester()
+    public TesterClass()
     {
         // initialise instance variables
         x = 0;
