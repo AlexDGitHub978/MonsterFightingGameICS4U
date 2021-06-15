@@ -1,23 +1,23 @@
-#Monster Fighting Game
+# Monster Fighting Game
 
-##Game Information:
+## Game Information:
 
-####Name: Monster Fighting Game
+#### Name: Monster Fighting Game
 
-####Company: RalphTech
+#### Company: RalphTech
 
-####Version: v1.0
+#### Version: v1.0
 
-####Date of Conception: 2021-06-14
+#### Date of Conception: 2021-06-14
 
-####Task performed:
+#### Task performed:
 - Creates a procedurally generated turn based monster fighting game
 - User vs computer
 - Based on a reskinned version of rock paper scissors
 - Fantasy themed
 
 
-####Target Demographic:
+#### Target Demographic:
 Ideally children, but the game can be played by anyone who can read
 The game is meant for entertainment
 The game will be advertised to children
@@ -41,7 +41,7 @@ E for everyone (ages 6 and up)
 
 
 
-##Game Summary
+## Game Summary
 
 Step by step:
 Create a player class (ask the user their name, generate health and attack)
