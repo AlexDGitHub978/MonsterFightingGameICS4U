@@ -1,18 +1,18 @@
 /**
- * Description: This is a class for the monster object
+ * Description: This class will create a random monster,
+ * and determine its health as well as the damage it can inflict.
  *
- * @author John and Alexander
+ * @author John Khalife and Alexander Duong
  * @version 2021-06-15
  */
 
 //importing library for random number
-
 import java.lang.Math;
 
 //declaring the monster class
 public class Monster {
 
-    //Instance variables
+    //instance variables
 
     //static variable that holds the number of monster instances created
     private static intMonsterNum = 0;
@@ -22,7 +22,6 @@ public class Monster {
 
     //variable that holds the monsters name
     private String strName;
-
 
     /**
      * Description: This is a default constructor for the monster class
@@ -35,6 +34,36 @@ public class Monster {
         monsterDamage();
         monsterName();
         intMonsterNum++;
+    }
+    
+    /*
+     * Description: These are get methods for the private
+     * static and instance variables storing the number of
+     * monsters created, as well as the name, health, and
+     * damage of the current monster.
+     *
+     * @author Alexander Duong
+     * @version 2021-06-15
+     *
+     */
+    public int getMonsterNum() 
+    {
+        return intMonsterNum;
+    }
+
+    public String getName() 
+    {
+        return this.strName;
+    }
+
+    public int getHealth() 
+    {
+        return this.intHealth;
+    }
+
+    public int getDamage() 
+    {
+        return this.intDamage;
     }
 
     /**
@@ -76,6 +105,35 @@ public class Monster {
 
     }
 
+    /*
+     * Description: This method will make a simple calculation
+     * to determine the health of the monster. This will be based
+     * on a base value and a calculated value based on the number
+     * of monsters already created.
+     *
+     * @author Alexander Duong
+     * @version 2021-06-15
+     *
+     */
+    public void monsterHealth() 
+    {
+        this.intHealth = 70 + intMonsterNum * 5;
+    }
+
+    /*
+     * Description: This method will make a simple calculation
+     * to determine the damage the monster will inflict upon the player.
+     * This will be based on a base value and a calculated value based
+     * on the number of monsters already created.
+     *
+     * @author Alexander Duong
+     * @version 2021-06-15
+     *
+     */
+    public void monsterDamage() 
+    {
+        this.intDamage = 20 + intMonsterNum * 2;
+    }
 
     /**
      * Description: This is a method meant to reset all of the static variables in the monster class for a new game
@@ -86,59 +144,5 @@ public class Monster {
     public void resetMonster() {
         intMonsterNum = 0;
     }
-
-
-    /*
-     * Description: These are get methods for the private
-     * static and instance variables storing the number of
-     * monsters created, as well as the name, health, and
-     * damage of the current monster.
-     *
-     * @Alexander Duong
-     * @version 2021-06-15
-     */
-    public int getMonsterNum() {
-        return intMonsterNum;
-    }
-
-    public String getName() {
-        return strName;
-    }
-
-    public int getHealth() {
-        return intHealth;
-    }
-
-    public int getDamage() {
-        return intDamage;
-    }
-
-    /*
-     * Description: This method will make a simple calculation
-     * to determine the health of the monster. This will be based
-     * on a base value and a calculated value based on the number
-     * of monsters already created.
-     *
-     * @Alexander Duong
-     * @version 2021-06-15
-     */
-    public void monsterHealth() {
-        intHealth = 70 + intMonsterNum * 5;
-    }
-
-    /*
-     * Description: This method will make a simple calculation
-     * to determine the damage the monster will inflict upon the player.
-     * This will be based on a base value and a calculated value based
-     * on the number of monsters already created.
-     *
-     * @Alexander Duong
-     * @version 2021-06-15
-     */
-    public void monsterDamage() {
-        intDamage = 20 + intMonsterNum * 2;
-    }
-
-
 }
 

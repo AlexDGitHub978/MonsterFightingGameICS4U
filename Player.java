@@ -1,4 +1,3 @@
-
 /**
  * Player is where the players name and health is tracked and kept. 
  * It has a method that gets the health of the player.
@@ -10,14 +9,20 @@
  */
 
 //import java Scanner
-import java.util.Scanner; 
- 
+import java.util.Scanner;
+
+//import java math
+import java.lang.Math; 
 public class Player
 {
   //declare instane variables
-  String strName;
-  int intHealth;
-  int intATK; 
+  private String strName;
+  private int intHealth;
+  private int intATK;
+  
+  //declare variables for random numbers 
+  int randHPBuff;
+  int randATKBuff;
   
   //get method for players name 
   public String getstrName()
@@ -46,8 +51,10 @@ public class Player
       //declare a variable of type person
       Player name = new Player(); 
       
-      //ask the user for enter name 
+      //ask the user for enter name
+      System.out.println("****************"); 
       System.out.println("Enter your name");
+      System.out.println("****************"); 
       
       //use the scanner to get name 
       strPlayerName = new Scanner(System.in).nextLine(); 
@@ -60,23 +67,34 @@ public class Player
   //create a method that gets the health of the player and reutns the health
   public void health()
   {
-      
+      //sets the base value of the health to 70
+      this.intHealth = 70; 
   }
   
+  //create a method to buff the player's health by a random value
+  public static void PlayerHPBuff(int health,int randHPBuff)
+  {
+      //create a random number for buff
+      randHPBuff = (int) ((Math.random()*6) +1) *10;
+      
+      //add random number to health value 
+      health += randHPBuff;
+    
+      //print message notifiying player incrase of Health stats
+      System.out.println("you've got a health potion! your health has increased "+ randHPBuff);
+  }
 
-  //create a method to buff the player's health by a random value
-  
-  
-  
   //create a method that increases the players strength by a random value with potions 
- 
- 
- 
-  //create a method to buff the player's health by a random value
-  
-  
-  
-  //create a method that increases the players strength by a random value with potions 
-  
-  
+  public static void PlayerATKBuff(int ATK, int randATKBuff)
+  {
+      //create a random number for the strength 
+      randATKBuff = (int) ((Math.random()*6)+1) *2;
+      
+      //add random number to the health 
+      ATK += randATKBuff;
+    
+      //print message notifiying player incrase of ATK stats
+      System.out.println("you've recieved a strength potion! your health has increased "+ randATKBuff);
+      
+  }
 }
