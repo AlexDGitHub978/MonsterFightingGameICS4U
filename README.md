@@ -18,11 +18,11 @@
 
 
 #### Target Demographic:
-Ideally children, but the game can be played by anyone who can read
-The game is meant for entertainment
-The game will be advertised to children
-recommended to ages 6 - 10
-E for everyone (ages 6 and up) 
+> Ideally children, but the game can be played by anyone who can read
+> The game is meant for entertainment
+> The game will be advertised to children
+> recommended to ages 6 - 10
+> E for everyone (ages 6 and up) 
 
 
 
@@ -44,42 +44,19 @@ E for everyone (ages 6 and up)
 ## Game Summary
 
 Step by step:
-Create a player class (ask the user their name, generate health and attack)
-Show the user their health and attack values
-Ask how many monsters the user wants to defeat
-Create that many monster instances in an array
-Ask if the user wants to see the tutorial (only once in the whole program)
-Game will start
-Double loops (one for looping through monsters, one for looping through turn based combat inside of the other loop)
-Will begin going through an array of monsters and introduce the monster to the player: (name, health)
-Will ask player to do a simple contest of reskinned rock paper scissors
-Whoever wins will have their damage value subtracted from the other’s health
-They do this until one of them dies
-Each cycle the computer displays the health of the computer and player
-The next monster appears
-Process repeats until the user defeats the number of monsters that they specified
-The user is asked if they want to play again
-
-
-Abilities that the player and monster will be able to choose from (reskinned RockPaperScissors):
-
-Quick slice: 
-Blocked by Shield bash
-Dodges Mighty slam
-Deal normal damage to quick slice
-
-Mighty slam:
-Dodged by Quick slice
-Deals high damage against Mighty slam
-Breaks through shield bash
-
-Shield bash:
-Blocks quick slice
-deals no damage against shield bash
-Unable to block against mighty slam
-
-
-
-
-
+> Create a player class (ask the user their name, generate health and attack)
+> Show the user their health and attack values
+> Ask how many monsters the user wants to defeat
+> Create that many monster instances in an array
+> Ask if the user wants to see the tutorial (only once in the whole program)
+> Game will start
+> Double loops (one for looping through monsters, one for looping through turn based combat inside of the other loop)
+> Will begin going through an array of monsters and introduce the monster to the player: (name, health)
+> Will ask player to do a simple contest of reskinned rock paper scissors
+> Whoever wins will have their damage value subtracted from the other’s health
+> They do this until one of them dies
+> Each cycle the computer displays the health of the computer and player
+> The next monster appears
+> Process repeats until the user defeats the number of monsters that they specified
+> The user is asked if they want to play again
 
