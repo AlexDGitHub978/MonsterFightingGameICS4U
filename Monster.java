@@ -23,7 +23,6 @@ public class Monster {
     //variable that holds the monsters name
     private String strName;
 
-
     /**
      * Description: This is a default constructor for the monster class
      *
