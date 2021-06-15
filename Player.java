@@ -79,6 +79,9 @@ public class Player
       
       //add random number to health value 
       health += randHPBuff;
+    
+      //print message notifiying player incrase of Health stats
+      System.out.println("you've got a health potion! your health has increased "+ randHPBuff);
   }
 
   //create a method that increases the players strength by a random value with potions 
@@ -89,5 +92,9 @@ public class Player
       
       //add random number to the health 
       ATK += randATKBuff;
+    
+      //print message notifiying player incrase of ATK stats
+      System.out.println("you've recieved a strength potion! your health has increased "+ randATKBuff);
+      
   }
 }
