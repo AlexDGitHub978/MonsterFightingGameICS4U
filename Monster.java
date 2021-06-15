@@ -42,7 +42,7 @@ public class Monster {
      * monsters created, as well as the name, health, and
      * damage of the current monster.
      *
-     * @Alexander Duong
+     * @author Alexander Duong
      * @version 2021-06-15
      *
      */
@@ -111,7 +111,7 @@ public class Monster {
      * on a base value and a calculated value based on the number
      * of monsters already created.
      *
-     * @Alexander Duong
+     * @author Alexander Duong
      * @version 2021-06-15
      *
      */
@@ -126,7 +126,7 @@ public class Monster {
      * This will be based on a base value and a calculated value based
      * on the number of monsters already created.
      *
-     * @Alexander Duong
+     * @author Alexander Duong
      * @version 2021-06-15
      *
      */
