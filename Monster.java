@@ -10,6 +10,29 @@
 public class Monster {
 
   /*
+  * Description: These are get methods for the private
+  * instance variables storing the name, health, and
+  * damage of the monster.
+  *
+  * @Alexander Duong
+  * @version 2021-06-15
+  */
+  public String getName()
+  {
+    return strName;
+  }
+  
+  public int getHealth()
+  {
+    return intHealth;
+  }
+  
+  public int getDamage()
+  {
+    return intDamage;
+  }
+ 
+  /*
   * Description: This method will make a simple calculation
   * to determine the health of the monster. This will be based
   * on a base value and a calculated value based on the number
