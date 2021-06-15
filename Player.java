@@ -60,18 +60,12 @@ public class Player
   //create a method that gets the health of the player and reutns the health
   public void health()
   {
-      
+      //sets the base value of the health to 70
+      this.intHealth = 70; 
   }
   
+  
 
-  //create a method to buff the player's health by a random value
-  
-  
-  
-  //create a method that increases the players strength by a random value with potions 
- 
- 
- 
   //create a method to buff the player's health by a random value
   
   
