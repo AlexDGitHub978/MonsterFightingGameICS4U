@@ -65,6 +65,19 @@ public class Monster {
     {
         return this.intDamage;
     }
+    
+    /*
+     * Description: This is the set method to update
+     * the health of the monster.
+     *
+     * @author Alexander Duong
+     * @version 2021-06-15
+     *
+     */
+    public void setHealth(int health)
+    {
+        this.intHealth = health;
+    }
 
     /**
      * Description: This method is meant to set a randomly generated name for the monster class.
