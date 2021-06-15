@@ -15,7 +15,7 @@ import java.util.Scanner;
 import java.lang.Math; 
 public class Player
 {
-  //declare instane variables
+  //declare instance variables
   private String strName;
   private int intHealth;
   private int intATK;
@@ -34,6 +34,19 @@ public class Player
   public void setstrName(String s)
   {
       this.strName = s; 
+  }
+  //create a method that gets the health of the player and reutns the health
+  public void health()
+  {
+      //sets the base value of the health to 70
+      this.intHealth = 70; 
+  }
+  
+   //create method that sets ATK to 20
+  public void ATK()
+  {
+      //sets the base value of ATK to 20 
+      this.intATK = 20; 
   }
   
   //get method for players health 
@@ -62,13 +75,6 @@ public class Player
       //set the users name with set method 
       name.setstrName(strPlayerName); 
       
-  }
-  
-  //create a method that gets the health of the player and reutns the health
-  public void health()
-  {
-      //sets the base value of the health to 70
-      this.intHealth = 70; 
   }
   
   //create a method to buff the player's health by a random value
