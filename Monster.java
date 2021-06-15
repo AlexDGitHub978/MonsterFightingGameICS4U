@@ -11,12 +11,18 @@ public class Monster {
 
   /*
   * Description: These are get methods for the private
-  * instance variables storing the name, health, and
-  * damage of the monster.
+  * static and instance variables storing the number of
+  * monsters created, as well as the name, health, and
+  * damage of the current monster.
   *
   * @Alexander Duong
   * @version 2021-06-15
   */
+  public int getMonsterNum()
+  {
+    return intMonsterNum;
+  }
+  
   public String getName()
   {
     return strName;
