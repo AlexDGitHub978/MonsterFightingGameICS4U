@@ -68,7 +68,8 @@ public class Monster {
     }
 
     /**
-     * Description: This is a random name method for the monster class - it sets the name of the monster to a random name utilizing many predetermined smaller names
+     * Description: This method is meant to set a randomly generated name for the monster class.
+     * It does this by using several predetermined words and randomly mising them together
      *
      * @author John Khalife
      * @version 2021-06-15
