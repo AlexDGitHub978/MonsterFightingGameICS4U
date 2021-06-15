@@ -69,6 +69,14 @@ public class Player
   
   
   //create a method that increases the players strength by a random value with potions 
+ 
+ 
+ 
+  //create a method to buff the player's health by a random value
+  
+  
+  
+  //create a method that increases the players strength by a random value with potions 
   
   
 }
