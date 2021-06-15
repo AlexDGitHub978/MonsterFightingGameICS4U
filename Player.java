@@ -1,14 +1,82 @@
+
 /**
- * Description: This is a class for the monster object
+ * Player is where the players name and health is tracked and kept. 
+ * It has a method that gets the health of the player.
+ * It has a method that buffs the players health with a random number.
+ * The strength is going to increase with random values with potions. 
  *
- * @author
- * @version 2021-06-03
- *
+ * @author (Atchya Nandan And Vincent Zhu) 
+ * @version Start: June 15th, 2021 
  */
 
-//declaring the monster class
-public class Player {
+//import java Scanner
+import java.util.Scanner; 
+ 
+public class Player
+{
+  //declare instane variables
+  String strName;
+  int intHealth;
+  int intATK; 
+  
+  //get method for players name 
+  public String getstrName()
+  {
+      return this.getstrName(); 
+  }
+  
+  //set method for players name
+  public void setstrName(String s)
+  {
+      this.strName = s; 
+  }
+  
+  //get method for players health 
+  public int getintHealth()
+  {
+      return this.getintHealth(); 
+  }
+  
+  //create method that asks the user for there name
+  public void name()
+  {
+      //declare variable for the players name 
+      String strPlayerName;
+      
+      //declare a variable of type person
+      Player name = new Player(); 
+      
+      //ask the user for enter name 
+      System.out.println("Enter your name");
+      
+      //use the scanner to get name 
+      strPlayerName = new Scanner(System.in).nextLine(); 
+      
+      //set the users name with set method 
+      name.setstrName(strPlayerName); 
+      
+  }
+  
+  //create a method that gets the health of the player and reutns the health
+  public void health()
+  {
+      
+  }
+  
 
-
-
+  //create a method to buff the player's health by a random value
+  
+  
+  
+  //create a method that increases the players strength by a random value with potions 
+ 
+ 
+ 
+  //create a method to buff the player's health by a random value
+  
+  
+  
+  //create a method that increases the players strength by a random value with potions 
+  
+  
 }
