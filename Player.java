@@ -10,14 +10,18 @@
  */
 
 //import java Scanner
-import java.util.Scanner; 
- 
+import java.util.Scanner;
+
+//import java math
+import java.lang.Math; 
 public class Player
 {
   //declare instane variables
-  String strName;
-  int intHealth;
-  int intATK; 
+  private String strName;
+  private int intHealth;
+  private int intATK;
+  private int randHPBuff;
+  private int randATKBuff;
   
   //get method for players name 
   public String getstrName()
@@ -60,23 +64,28 @@ public class Player
   //create a method that gets the health of the player and reutns the health
   public void health()
   {
-      
+      //sets the base value of the health to 70
+      this.intHealth = 70; 
   }
   
+  
+  //create a method to buff the player's health by a random value
+  public static void PlayerHPBuff(int health,int randHPBuff)
+  {
+      randHPBuff = (int) ((Math.random()*6) +1) *10;
+      health += randHPBuff;
+  }
 
-  //create a method to buff the player's health by a random value
-  
-  
-  
-  //create a method that increases the players strength by a random value with potions 
- 
- 
- 
-  //create a method to buff the player's health by a random value
-  
   
   
   //create a method that increases the players strength by a random value with potions 
+  public static void PlayerATKBuff(int ATK, int randATKBuff)
+  {
+        randATKBuff = (int) ((Math.random()*6)+1) *2;
+        ATK += randATKBuff;
+  }
+    
+
   
   
 }
