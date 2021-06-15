@@ -60,4 +60,6 @@ Step by step:
 > Process repeats until the user defeats the number of monsters that they specified
 > The user is asked if they want to play again
 
+## Link to the Planning document:
+[Group Six SoftWare Analysis Exercise](https://docs.google.com/document/d/1nD-2GKFhhcF3WgG6UNOtzAstcQYzSuQptUMcrtkBEEw/edit?usp=sharing)
 
