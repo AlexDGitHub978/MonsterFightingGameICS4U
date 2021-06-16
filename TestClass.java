@@ -17,6 +17,7 @@ public class TestClass
        //ask the user if they want to play the monster fighting game 
        System.out.println("Would you like to play the Monster fighting game"); 
        strStart = new Scanner(System.in).nextLine(); 
+      System.out.println("Testing");
        
        
        
