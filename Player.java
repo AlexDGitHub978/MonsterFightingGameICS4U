@@ -15,6 +15,7 @@ import java.util.Scanner;
 import java.lang.Math; 
 public class Player
 {
+  //Atchya Nadnan *
   //declare instance variables
   private String strName;
   private int intHealth;
@@ -77,6 +78,11 @@ public class Player
       
   }
   
+  //* Atchya Nandan 
+  
+  
+  
+  //Vincent *
   //create a method to buff the player's health by a random value
   public static void PlayerHPBuff(int health,int randHPBuff)
   {
@@ -104,3 +110,5 @@ public class Player
       
   }
 }
+
+//Vincent *
