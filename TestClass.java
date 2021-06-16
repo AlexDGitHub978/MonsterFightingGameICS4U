@@ -2,7 +2,7 @@
 /**
  * In the test class we ask the user if they want to play and repeat the game. 
  *
- * @author (Atchya Nandan) 
+ * @author
  * @version Start: June 16th 2021 
  */
 //import java Scanner
