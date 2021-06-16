@@ -1,7 +1,7 @@
 /**
  * In the test class we ask the user if they want to play and repeat the game. 
  *
- * @author (Atchya Nandan) 
+ * @author (Karim Al-Bukhari) 
  * @version Start: June 16th 2021 
  */
 //import java Scanner
@@ -17,6 +17,7 @@ public class TestClass
        boolean bolAgain = false;
        boolean bolPlayAgain = false; 
     
+       //a loop that starts or exits the game 
        do
        {
           //ask the user if they want to play the monster fighting game 
@@ -25,20 +26,24 @@ public class TestClass
           //use the scanner to start
           strStart = new Scanner(System.in).nextLine();
           
+          //starts the game for the user 
           if(strStart.equalsIgnoreCase("start"))
-          {
-              
-          do
-          {
+          { 
+           do
+           {
              //add a new game
              System.out.println("NEW GAME");
              
              //create a new game 
              new game(); 
             
+            //loop that asks the user to play again
             do 
-            {  
+            {
+            //ask the user to play again 
             System.out.println("Do you want to play again [Y/N]?");
+            
+            //use the scanner for play again
             strplayAgain = new Scanner(System.in).nextLine();
             if (strplayAgain.equalsIgnoreCase("Y"))
             {
@@ -56,11 +61,12 @@ public class TestClass
               System.out.println("Please enter Y or N, Try Again");
               bolPlayAgain = true;
             }
-        }while(bolPlayAgain);
-        }while(bolAgain); 
+           }while(bolPlayAgain);
+            }while(bolAgain); 
           }
           else if(strStart.equalsIgnoreCase("Exit"))
           {
+              System.out.println("Exit"); 
               bolTryAgain = false; 
           }
           else 
@@ -68,7 +74,5 @@ public class TestClass
             bolTryAgain = true; 
           }
        }while(bolTryAgain); 
-       
-       
    }
 }
