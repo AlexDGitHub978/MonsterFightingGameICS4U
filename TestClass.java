@@ -8,7 +8,7 @@
 import java.util.Scanner; 
 public class TestClass
 {
-   //Atchya Nandan *
+   //Atchya Nandan * 
    public static void main(String[] args)
    {
        //delclare variables 
@@ -73,15 +73,15 @@ public class TestClass
           }
           
           //Atchya Nandan *
-          else if(strStart.equalsIgnoreCase("Exit"))
-          {
-              System.out.println("Exit"); 
-              bolTryAgain = false; 
-          }
-          else 
-          {
-            bolTryAgain = true; 
-          }
+       else if(strStart.equalsIgnoreCase("Exit"))
+       {
+           System.out.println("Exit"); 
+           bolTryAgain = false; 
+       }
+       else 
+       {
+       bolTryAgain = true; 
+       }
        }while(bolTryAgain); 
    }
 }
