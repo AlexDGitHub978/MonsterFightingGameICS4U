@@ -15,7 +15,9 @@ import java.util.Scanner;
 import java.lang.Math; 
 public class Player
 {
-  //Atchya Nadnan *
+  /*
+   * Atchya Nandan, I am creating instance variable right here. 
+   */
   //declare instance variables
   private String strName;
   private int intHealth;
@@ -25,23 +27,40 @@ public class Player
   int randHPBuff;
   int randATKBuff;
   
+  /*
+   * Atchya Nandan, I am creating a method for players name 
+  */
+  
   //get method for players name 
   public String getstrName()
   {
       return this.getstrName(); 
   }
   
+   /*
+   * Atchya Nandan, I am creating a set method for the name 
+  */
+  
   //set method for players name
   public void setstrName(String s)
   {
       this.strName = s; 
   }
+  
+  /*
+   * Atchya Nandan, I am creating a method that uses health and sets the base value to 70 
+  */
+  
   //create a method that gets the health of the player and reutns the health
   public void health()
   {
       //sets the base value of the health to 70
       this.intHealth = 70; 
   }
+  
+  /*
+  * Atchya Nandan, I am creating a method that uses ATK and sets the base value to 20
+  */
   
    //create method that sets ATK to 20
   public void ATK()
@@ -50,12 +69,22 @@ public class Player
       this.intATK = 20; 
   }
   
+  /*
+  * Atchya Nandan, I am creating a get method for the health
+  */
+  
   //get method for players health 
   public int getintHealth()
   {
       return this.getintHealth(); 
   }
   
+    /*
+   * Atchya Nandan, I am creating a name method that asks the
+   * user fort there name and then sets the name in the
+   * instance variable 
+  */
+
   //create method that asks the user for there name
   public void name()
   {
@@ -76,11 +105,7 @@ public class Player
       //set the users name with set method 
       name.setstrName(strPlayerName); 
       
-  }
-  
-  //* Atchya Nandan 
-  
-  
+  } 
   
   //Vincent *
   //create a method to buff the player's health by a random value
