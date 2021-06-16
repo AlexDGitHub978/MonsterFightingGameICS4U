@@ -1,7 +1,7 @@
 /**
  * In the test class we ask the user if they want to play and repeat the game. 
  *
- * @author (Karim Al-Bukhari) 
+ * @author (Karim Al-Bukhari And Atchya Nandan) 
  * @version Start: June 16th 2021 
  */
 //import java Scanner
