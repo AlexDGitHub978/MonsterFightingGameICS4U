@@ -8,7 +8,11 @@
 import java.util.Scanner; 
 public class TestClass
 {
-   //Atchya Nandan * 
+   /*
+    * Atchya Nandan: Creating avariable for the user to start
+    * creating variable for them to play again
+    * Then the boolean variables catches errors 
+    */
    public static void main(String[] args)
    {
        //delclare variables 
@@ -18,6 +22,11 @@ public class TestClass
        boolean bolAgain = false;
        boolean bolPlayAgain = false; 
     
+    /*
+    * Atchya Nandan: asks the user if they want to start
+    * then it will go in the if else statment and create
+    * a new game that refers to the game class
+    */
        //a loop that starts or exits the game 
        do
        {
@@ -38,8 +47,6 @@ public class TestClass
              //create a new game 
              new game(); 
             
-              //Atchya Nandan *
-              
             //loop that asks the user to play again
               
             //Karim Al-Bukhari
@@ -72,7 +79,10 @@ public class TestClass
              // Karmim Al-Bukhari *
           }
           
-          //Atchya Nandan *
+    /*
+    * Atchya Nadnan: The exit will exit the user and it will try again in the large loop
+    */
+     
        else if(strStart.equalsIgnoreCase("Exit"))
        {
            System.out.println("Exit"); 
@@ -86,4 +96,4 @@ public class TestClass
    }
 }
 
-//Atchya Nandan *
+
