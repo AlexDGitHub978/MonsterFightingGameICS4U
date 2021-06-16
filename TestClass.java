@@ -8,6 +8,7 @@
 import java.util.Scanner; 
 public class TestClass
 {
+   //Atchya Nandan *
    public static void main(String[] args)
    {
        //delclare variables 
@@ -37,7 +38,11 @@ public class TestClass
              //create a new game 
              new game(); 
             
+              //Atchya Nandan *
+              
             //loop that asks the user to play again
+              
+            //Karim Al-Bukhari
             do 
             {
             //ask the user to play again 
@@ -63,7 +68,11 @@ public class TestClass
             }
            }while(bolPlayAgain);
             }while(bolAgain); 
+             
+             // Karmim Al-Bukhari *
           }
+          
+          //Atchya Nandan *
           else if(strStart.equalsIgnoreCase("Exit"))
           {
               System.out.println("Exit"); 
@@ -76,3 +85,5 @@ public class TestClass
        }while(bolTryAgain); 
    }
 }
+
+//Atchya Nandan *
