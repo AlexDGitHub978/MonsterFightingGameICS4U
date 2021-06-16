@@ -42,7 +42,7 @@ public class Game {
           System.out.println("This is a single player game.");
           System.out.println("Enter your name and choose how many monsters you want to fight!");
           System.out.println("You and each monster will be able to choose from 3 different abilities.");
-          System.out.println("Quick slice is blocked by Shield bash, dodges Mighty Slam, and deals normal damage to quick slice.");
+          System.out.println("Quick slice is blocked by Shield bash, dodges Mighty Slam, and deals normal damage to Quick slice.");
           System.out.println("Mighty slam is dodged by Quick slice, deals high damage against Mighty slam, and breaks through Shield bash.");
           System.out.println("Shield bash blocks Quick slice, deals no damage against Shield bash, and is unable to block Mighty slam.");
           System.out.println("You will fight each monster one by one, until one of you is defeated.");
