@@ -80,10 +80,6 @@ public class Player
   //create method that asks the user for there name
   public void name()
   {
-    boolean bolEmpty = false;
-
-     do{
-
       //ask the user for enter name
       System.out.println("****************");
       System.out.println("Enter your name");
@@ -92,30 +88,22 @@ public class Player
       //use the scanner to get name
       this.strPlayer = new Scanner(System.in).nextLine();
 
-    if(this.strPlayer.isEmpty())
-    {
-       System.out.println("You are guest");
-       this.strPlayer = "GUEST";
-       bolEmpty = false;
+      if(this.strPlayer.isEmpty())
+      {
+        System.out.println("You are guest");
+        this.strPlayer = "GUEST";
+      }
 
-    }
-
-    else if(this.strPlayer.trim().isEmpty())
-    {
-       System.out.println("You are guest");
-       this.strPlayer = "GUEST";
-       bolEmpty = false;
-
-    }
-    else
-    {
-       bolEmpty = false;
-    }
-  }while(bolEmpty);
+      else if(this.strPlayer.trim().isEmpty())
+      {
+        System.out.println("You are guest");
+        this.strPlayer = "GUEST";
+      }
+  }
 
   //Vincent *
   //create a method to buff the player's health by a random value
-  public static void PlayerHPBuff()
+  public void PlayerHPBuff()
   {
       //create a random number for buff
       int randHPBuff = (int) ((Math.random()*6) +1) *10;
@@ -128,7 +116,7 @@ public class Player
   }
 
   //create a method that increases the players strength by a random value with potions
-  public static void PlayerATKBuff()
+  public void PlayerATKBuff()
   {
       //create a random number for the strength
       int randATKBuff = (int) ((Math.random()*6)+1) *2;
