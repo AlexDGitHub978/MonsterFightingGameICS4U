@@ -20,13 +20,12 @@ public class Player
    */
   //declare instance variables
   private String strName;
-  private int intHealth;
-  private int intATK;
+  private int intHealth = 100;
+  private int intATK = 35;
   
   //constructor for the player class
   player(String s, int h, int ATK)
   {
-    
     this.strName = s;
     this.intHealth = h;
     this.intATK = ATK; 
@@ -54,30 +53,7 @@ public class Player
       return this.strName(); 
   }
   
- 
-  /*
-   * Atchya Nandan, I am creating a method that uses health and sets the base value to 100 
-  */
-  
-  //create a method that gets the health of the player and reutns the health
-  public void health()
-  {
-      //sets the base value of the health to 100
-      this.intHealth = 100; 
-  }
-  
-  /*
-  * Atchya Nandan, I am creating a method that uses ATK and sets the base value to 35
-  */
-  
-   //create method that sets ATK to 35
-  public void ATK()
-  {
-      //sets the base value of ATK to 35 
-      this.intATK = 35; 
-  }
-  
-  /*
+   /*
   * Atchya Nandan, I am creating a get method for the health
   */
   
@@ -86,6 +62,11 @@ public class Player
   {
       return this.intHealth(); 
   }
+  
+  /*
+   * Atchya Nandan, I am creating a method that uses health and sets the base value to 100 
+  */
+ 
   
     /*
    * Atchya Nandan, I am creating a name method that asks the
@@ -98,7 +79,7 @@ public class Player
   {
       
       //declare a variable of type Player
-      Player name = new Player(); 
+      game name = new game(); 
       
       //ask the user for enter name
       System.out.println("****************"); 
@@ -107,7 +88,8 @@ public class Player
       
       //use the scanner to get name 
       this.strPlayer = new Scanner(System.in).nextLine(); 
-      
+       
+ 
       
   } 
   
