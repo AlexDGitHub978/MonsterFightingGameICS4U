@@ -113,26 +113,46 @@ public class Player {
   //create a method to buff the player's health by a random value
   public void PlayerHPBuff()
   {
+
+
+
       //create a random number for buff
       int randHPBuff = (int) ((Math.random()*6) +1) *10;
 
-        //add random number to health value
-        this.intHealth += randHPBuff;
+      int intBuffChance = (int) Math.random() * 4 + 1;
 
-        //print message notifiying player incrase of Health stats
-        System.out.println("you've got a health potion! your health has increased " + randHPBuff);
+
+      if (intBuffChance == 1) {
+          //add random number to health value
+          this.intHealth += randHPBuff;
+
+          //print message notifiying player incrase of Health stats
+          System.out.println("you've got a health potion! your health has increased " + randHPBuff);
+
+
+      }
+
     }
 
     //create a method that increases the players strength by a random value with potions
     public void PlayerATKBuff() {
+
+        int intBuffChance = (int) Math.random() * 4 + 1;
+
         //create a random number for the strength
         int randATKBuff = (int) ((Math.random() * 6) + 1) * 2;
 
-        //add random number to the health
-        this.intATK += randATKBuff;
+        if (intBuffChance == 1) {
 
-        //print message notifiying player incrase of ATK stats
-        System.out.println("you've received a strength potion! your health has increased " + randATKBuff);
+            //add random number to the health
+            this.intATK += randATKBuff;
+
+            //print message notifiying player incrase of ATK stats
+            System.out.println("you've received a strength potion! your strength has increased " + randATKBuff);
+
+
+        }
+
 
     }
 }

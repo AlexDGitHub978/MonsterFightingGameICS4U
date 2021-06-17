@@ -31,7 +31,7 @@ public class TestClass
       do
       {
          //ask the user if they want to play the monster fighting game 
-         System.out.println("Would you like to play the Monster fighting game\nEnter Start or enter Exit");
+         System.out.println("Would you like to play the Monster fighting game?\nEnter Start or enter Exit");
        
          //use the scanner to start
          strStart = new Scanner(System.in).nextLine();

@@ -91,16 +91,16 @@ public class Monster {
         String strMonsterStrength = null, strMonsterAdjective, strMonsterType;
 
         if (this.intHealth < 85) {
-            strMonsterStrength = "Weak ";
+            strMonsterStrength = "Weak";
         } else if (this.intHealth < 100) {
-            strMonsterStrength = "Average ";
+            strMonsterStrength = "Average";
         } else if (this.intHealth >= 100) {
-            strMonsterStrength = "Strong ";
+            strMonsterStrength = "Strong";
 
         }
 
         //This is the array that holds the adjectives that describe the monster
-        String[] strAdjectives = {"Vengeful ", " Enraged ", " Adorable ", " Annoying ", " Tired ", " Happy ", " Funny ", " Ridiculous ", " Depressed", "Depraved"};
+        String[] strAdjectives = {" Vengeful ", " Enraged ", " Adorable ", " Annoying ", " Tired ", " Happy ", " Funny ", " Ridiculous ", " Depressed", "Depraved"};
 
         strMonsterAdjective = strAdjectives[(int) (Math.random() * 10)];
 
