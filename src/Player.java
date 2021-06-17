@@ -89,22 +89,23 @@ public class Player {
     public void name()
     {
         //ask the user for enter name
-        System.out.println("****************");
-        System.out.println("Enter your name");
-        System.out.println("****************");
+        System.out.println("************************************");
+        System.out.println("Enter your name.");
+        System.out.println("Leave this blank to play as a guest.");
+        System.out.println("************************************");
 
         //use the scanner to get name
         this.strName = new Scanner(System.in).nextLine();
 
         if(this.strName.isEmpty())
         {
-            System.out.println("You are guest");
+            System.out.println("You are guest.");
             this.strName = "GUEST";
         }
 
         else if(this.strName.trim().isEmpty())
         {
-            System.out.println("You are guest");
+            System.out.println("You are guest.");
             this.strName = "GUEST";
         }
     }
@@ -114,25 +115,25 @@ public class Player {
   public void PlayerHPBuff()
   {
       //create a random number for buff
-      int randHPBuff = (int) ((Math.random()*6) +1) *10;
+      int randHPBuff = (int)((Math.random() * 6) + 1) * 10;
 
         //add random number to health value
         this.intHealth += randHPBuff;
 
         //print message notifiying player incrase of Health stats
-        System.out.println("you've got a health potion! your health has increased " + randHPBuff);
+        System.out.println("You've got a health potion! Your health has increased by " + randHPBuff);
     }
 
     //create a method that increases the players strength by a random value with potions
     public void PlayerATKBuff() {
         //create a random number for the strength
-        int randATKBuff = (int) ((Math.random() * 6) + 1) * 2;
+        int randATKBuff = (int)((Math.random() * 6) + 1) * 2;
 
         //add random number to the health
         this.intATK += randATKBuff;
 
         //print message notifiying player incrase of ATK stats
-        System.out.println("you've received a strength potion! your health has increased " + randATKBuff);
+        System.out.println("You've received a strength potion! Your strength has increased by " + randATKBuff);
 
     }
 }
