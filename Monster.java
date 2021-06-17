@@ -10,7 +10,8 @@
 import java.lang.Math;
 
 //declaring the monster class
-public class Monster {
+public class Monster 
+{
 
     //instance variables
 
