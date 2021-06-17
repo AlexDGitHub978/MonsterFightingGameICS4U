@@ -78,33 +78,17 @@ public class Player
      * @version 2021-06-16
      *
      */
-    public int getIntATK() { return this.intATK; }
+    public int getintATK() 
+    { 
+      return this.intATK; 
+    }
 
     //get method for players health
-    public int getintHealth() {
-        return this.intHealth();
+    public int getintHealth() 
+    {
+      return this.intHealth;
     }
-
-    //create method that asks the user for there name
-    public void name() {
-        //declare variable for the players name
-        String strPlayerName;
-
-        //declare a variable of type Player
-        Player name = new Player();
-
-        //ask the user for enter name
-        System.out.println("****************");
-        System.out.println("Enter your name");
-        System.out.println("****************");
-
-        //use the scanner to get name
-        strPlayerName = new Scanner(System.in).nextLine();
-
-        //set the users name with set method
-        name.setstrName(strPlayerName);
-
-    }
+  
   //create method that asks the user for there name
   public void name()
   {
@@ -115,9 +99,7 @@ public class Player
       System.out.println("****************");
 
       //use the scanner to get name
-      this.strPlayer = new Scanner(System.in).nextLine();
-
-
+      this.strName = new Scanner(System.in).nextLine();
   }
 
   //Vincent *
@@ -128,7 +110,7 @@ public class Player
       int randHPBuff = (int) ((Math.random()*6) +1) *10;
 
       //add random number to health value
-      health += randHPBuff;
+      this.inthealth += randHPBuff;
 
       //print message notifiying player incrase of Health stats
       System.out.println("you've got a health potion! your health has increased "+ randHPBuff);
@@ -141,7 +123,7 @@ public class Player
       int randATKBuff = (int) ((Math.random()*6)+1) *2;
 
       //add random number to the health
-      ATK += randATKBuff;
+      this.intATK += randATKBuff;
 
       //print message notifiying player incrase of ATK stats
       System.out.println("you've recieved a strength potion! your health has increased "+ randATKBuff);
