@@ -17,7 +17,7 @@ public class Game
 
 
 //static variable that counts the number of game instances created
-private static int intGamenum = 0;
+private static int intGameNum = 0;
 
 
 
@@ -119,7 +119,7 @@ private static int intGamenum = 0;
       //calling the battle function and passing in the current monster that the player is fighting
         battle(monsters[i]);
         System.out.println( player.getstrName + ", your health is " + player.getintHealth());
-        System.out.println( player.getstrName + ", your attack is " + player.getIntATK());
+        System.out.println( player.getstrName + ", your attack is " + player.getintATK());
         intRoundsPlayed++;
 
       //checking when the monster's or player's health is equal to zero
@@ -170,7 +170,7 @@ private static int intGamenum = 0;
      System.out.println("Well played, " + player.getstrName() + "!");
 
 
-     System.out.println("This was game #" + intGamenum);
+     System.out.println("This was game #" + intGameNum);
      if (boolPlayerDead) {
        System.out.println("You fought " + intMonstersDefeated + " monsters out of " + monsters.length + "!");
      } else {
@@ -178,8 +178,8 @@ private static int intGamenum = 0;
      }
 
      System.out.println("You played " + intRoundsPlayed + " rounds!");
-     System.out.println("Your attack value at the end of the game was " + player.getIntATK);
-     System.out.println("Your health value at the end of the game was " + player.getIntHealth();
+     System.out.println("Your attack value at the end of the game was " + player.getintATK);
+     System.out.println("Your health value at the end of the game was " + player.getintHealth();
 
      System.out.println("Check the text file corresponding to this game to see more statistics relating to your game!");
 
@@ -215,7 +215,7 @@ private static int intGamenum = 0;
                     myWriter.write("Winner: " + player.getstrName() +"\n\n");
                 }
 
-                myWriter.write("Game #" + intGamenum + "\n");
+                myWriter.write("Game #" + intGameNum + "\n");
 
                      if (boolPlayerDead) {
                         myWriter.write("Fought " + intMonstersDefeated + " monsters out of " + monsters.length + "\n");
@@ -228,8 +228,8 @@ private static int intGamenum = 0;
 
 
                 myWriter.write(intRoundsPlayed + " rounds played \n");
-                myWriter.write("Player attack value at end of game:" +  player.getIntATK() + "\n");
-                myWriter.write("Player health value at end of game:" +  getIntHealth() + "\n\n");
+                myWriter.write("Player attack value at end of game:" +  player.getintATK() + "\n");
+                myWriter.write("Player health value at end of game:" +  getintHealth() + "\n\n");
 
 
 
