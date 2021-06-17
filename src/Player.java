@@ -86,42 +86,35 @@ public class Player {
      * instance variable and if else statemtn for guest users or empty spaces
      */
 
-    //create method that asks the user for there name
-    public void name() {
-        boolean bolEmpty = false;
+    public void name()
+    {
+        //ask the user for enter name
+        System.out.println("****************");
+        System.out.println("Enter your name");
+        System.out.println("****************");
 
-        do {
+        //use the scanner to get name
+        this.strName = new Scanner(System.in).nextLine();
 
-            //ask the user for enter name
-            System.out.println("****************");
-            System.out.println("Enter your name");
-            System.out.println("****************");
+        if(this.strName.isEmpty())
+        {
+            System.out.println("You are guest");
+            this.strName = "GUEST";
+        }
 
-            //use the scanner to get name
-            this.strName = new Scanner(System.in).nextLine();
-
-            if (this.strName.isEmpty()) {
-                System.out.println("You are guest");
-                this.strName = "GUEST";
-                bolEmpty = false;
-
-            } else if (this.strName.trim().isEmpty()) {
-                System.out.println("You are guest");
-                this.strName = "GUEST";
-                bolEmpty = false;
-
-            } else {
-                bolEmpty = false;
-            }
-        } while (bolEmpty);
-
+        else if(this.strName.trim().isEmpty())
+        {
+            System.out.println("You are guest");
+            this.strName = "GUEST";
+        }
     }
 
-    //Vincent *
-    //create a method to buff the player's health by a random value
-    public void PlayerHPBuff() {
-        //create a random number for buff
-        int randHPBuff = (int) ((Math.random() * 6) + 1) * 10;
+  //Vincent *
+  //create a method to buff the player's health by a random value
+  public void PlayerHPBuff()
+  {
+      //create a random number for buff
+      int randHPBuff = (int) ((Math.random()*6) +1) *10;
 
         //add random number to health value
         this.intHealth += randHPBuff;

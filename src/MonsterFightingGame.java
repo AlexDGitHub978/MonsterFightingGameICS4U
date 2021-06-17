@@ -4,7 +4,7 @@
  * monsters they want to fight, and does the battles. It will
  * output the results to a file at the end of each game.
  *
- * @author John Khalife, Alexander Duong, and Vincent Zhu
+ * @author John Khalife, Alexander Duong, Vincent Zhu, and Karim Al-Bukhari
  * @version 2021-06-16
  *
  */
@@ -29,6 +29,31 @@ public class MonsterFightingGame
 
     //static variable that holds whether or not the player should be asked for the tutorial
     private static boolean bolTutorial = true;
+
+ /**
+ * Description: This is the default constructor.
+ * It calls the game tutorial to see if you are in tutorial mode
+ * It creates a new player
+ * It creates new monsters
+ * and then it starts the game
+ * @author Karim Al-Bukhari
+ * @version 2021-06-16
+ *
+ */
+    public MonsterFightingGame(){
+        
+        //Call the tutorial method.
+        gameTutorial();
+        
+        //Calling the default constructor of the player
+        player = new Player();
+        
+        //Call the user monsters method
+        userMonsters();
+        
+        //Call the rungame method
+        runGame();
+    }
 
 
 
