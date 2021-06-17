@@ -109,9 +109,6 @@ public class Player
   public void name()
   {
 
-      //declare a variable of type Player
-      game name = new game();
-
       //ask the user for enter name
       System.out.println("****************");
       System.out.println("Enter your name");
@@ -119,7 +116,6 @@ public class Player
 
       //use the scanner to get name
       this.strPlayer = new Scanner(System.in).nextLine();
-
 
 
   }
