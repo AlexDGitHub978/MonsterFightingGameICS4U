@@ -44,6 +44,9 @@ public class MonsterFightingGame
         
         //Call the tutorial method.
         gameTutorial();
+
+        //adding one to the number of monster instances
+        intGameNum++;
         
         //Calling the default constructor of the player
         player = new Player();
@@ -225,6 +228,7 @@ public class MonsterFightingGame
             System.out.println("Your opponent is a " + monsters[i].getName() + ".");
             System.out.println("Their attack is " + monsters[i].getDamage() + ".");
             System.out.println("Their health is "  + monsters[i].getHealth() + ".");
+            System.out.println("Your attack is " + player.getintATK());
 
             //this is the while loop that will control individual monster battles
             boolMonsterBattle = true;
@@ -232,8 +236,7 @@ public class MonsterFightingGame
 
 
                 //outputting the status of the battle
-                System.out.println(player.getstrName() + ", your health is " + player.getintHealth());
-                System.out.println("Also, your attack is " + player.getintATK());
+                System.out.println("Your health is " + this.player.getintHealth());
                 System.out.println("The monster's health is " + monsters[i].getHealth());
 
                 //calling the battle function and passing in the current monster that the player is fighting
