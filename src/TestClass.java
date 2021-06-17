@@ -58,6 +58,7 @@ public class TestClass
                * @version 2021-06-16
                *
                */
+               //Do while loop
                do 
                {
                   //ask the user to play again 
@@ -66,6 +67,7 @@ public class TestClass
                   //use the scanner for play again
                   strPlayAgain = new Scanner(System.in).nextLine();
                   
+                  // If statement to determine what happens when the user inputs a letter
                   if (strPlayAgain.equalsIgnoreCase("Y"))
                   {
                      bolPlayAgain=false;
@@ -84,7 +86,7 @@ public class TestClass
                   }
                }while(bolPlayAgain);
             }while(bolAgain); 
-             
+            //Ends the do while loop
              // Karim Al-Bukhari *
           }
           
