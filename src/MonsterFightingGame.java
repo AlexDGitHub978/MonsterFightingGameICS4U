@@ -411,8 +411,8 @@ public class MonsterFightingGame
                 monster.takeDamage(this.player.getintATK());
 
                 //output damage message
-                System.out.println("You used Quick Slice! Dealt " + this.player.getintATK() + "damage to the monster!");
-                System.out.println("The Monster uses Quick Slice! Dealt " + monster.getDamage() + "damage to you!");
+                System.out.println("You used Quick Slice! Dealt " + this.player.getintATK() + " damage to the monster!");
+                System.out.println("The Monster uses Quick Slice! Dealt " + monster.getDamage() + " damage to you!");
             }
             //monster used Shield Bash
             else if(monsterMove == 1)
@@ -421,7 +421,7 @@ public class MonsterFightingGame
                 this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The Monster uses Shield Bash! Blocking you Quick Slice and Dealt " + monster.getDamage() + "damage to you!");
+                System.out.println("The Monster uses Shield Bash! Blocking your Quick Slice and Dealt " + monster.getDamage() + " damage to you!");
             }
             //monster used Mighty Slam
             else if(monsterMove == 2)
