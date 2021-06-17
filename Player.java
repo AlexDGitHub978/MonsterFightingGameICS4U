@@ -32,6 +32,14 @@ public class Player
     this.intATK = ATK; 
   }
   
+  player()
+  {
+    this.strName = "Unknown";
+    this.intHealth = 0;
+    this.intATK = 0; 
+    
+  }
+  
   //declare variables for random numbers 
   int randHPBuff;
   int randATKBuff;
