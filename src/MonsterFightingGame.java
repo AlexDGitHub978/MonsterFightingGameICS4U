@@ -210,10 +210,10 @@ public class MonsterFightingGame
     public void runGame() {
 
         //boolean that checks if the player is dead
-        boolean boolPlayerDead = false;
+        boolean bolPlayerDead = false;
 
-        //boolean for thw hile loop that controls individual battles
-        boolean boolMonsterBattle = true;
+        //boolean for the while loop that controls individual battles
+        boolean bolMonsterBattle = true;
 
         //integer that checks for how many monsters were defeated if the player loses
         int intMonstersDefeated = 0;
@@ -231,8 +231,8 @@ public class MonsterFightingGame
             System.out.println("Your attack is " + player.getintATK());
 
             //this is the while loop that will control individual monster battles
-            boolMonsterBattle = true;
-            while(boolMonsterBattle) {
+            bolMonsterBattle = true;
+            while(bolMonsterBattle) {
 
 
                 //outputting the status of the battle
@@ -246,13 +246,13 @@ public class MonsterFightingGame
                 //checking when the monster's or player's health is equal to zero
                 if (player.getintHealth() <= 0) {
                     //informing the user of thei passing and eding the game
-                    boolMonsterBattle = false;
-                    boolPlayerDead = true;
+                    bolMonsterBattle = false;
+                    bolPlayerDead = true;
                     System.out.println(player.getstrName() + ", you have been defeated!");
 
                 } else if (monsters[i].getHealth() <= 0) {
                     //moving on to the next monster and informing the user
-                    boolMonsterBattle = false;
+                    bolMonsterBattle = false;
                     System.out.println( "The " + monsters[i].getName() + " has been defeated!");
                 }
 
@@ -263,7 +263,7 @@ public class MonsterFightingGame
             intMonstersDefeated ++;
 
             //checking if the player has been defeated
-            if(boolPlayerDead) {
+            if(bolPlayerDead) {
                 System.out.println("Better luck next time!");
                 i = monsters.length;
             } 
@@ -275,7 +275,7 @@ public class MonsterFightingGame
 
         }
 
-        printResults(boolPlayerDead, intMonstersDefeated, intRoundsPlayed);
+        printResults(bolPlayerDead, intMonstersDefeated, intRoundsPlayed);
 
     }
     
@@ -409,7 +409,7 @@ public class MonsterFightingGame
      * @version 2021-06-16
      *
      */
-    public void printResults(boolean boolPlayerDead, int intMonstersDefeated, int intRoundsPlayed) {
+    public void printResults(boolean bolPlayerDead, int intMonstersDefeated, int intRoundsPlayed) {
 
 
         //outputting a small amount of info about the game to the user
@@ -417,7 +417,7 @@ public class MonsterFightingGame
 
 
         System.out.println("This was game #" + intGameNum);
-        if (boolPlayerDead) {
+        if (bolPlayerDead) {
             System.out.println("You fought " + intMonstersDefeated + " monsters out of " + monsters.length + "!");
         } else {
             System.out.println("You defeated " + intMonstersDefeated + " monsters!");
@@ -455,7 +455,7 @@ public class MonsterFightingGame
             FileWriter myWriter = new FileWriter("MonsterFightingGame_#" + intGameNum + ".txt");
 
             //displaying winner
-            if (boolPlayerDead) {
+            if (bolPlayerDead) {
                 myWriter.write("Winner: " + monsters[intMonstersDefeated - 1].getName() + "\n\n");
             } else {
                 myWriter.write("Winner: " + this.player.getstrName() +"\n\n");
@@ -463,7 +463,7 @@ public class MonsterFightingGame
 
             myWriter.write("Game #" + intGameNum + "\n");
 
-            if (boolPlayerDead) {
+            if (bolPlayerDead) {
                 myWriter.write("Fought " + intMonstersDefeated + " monsters out of " + monsters.length + "\n");
 
             } else {

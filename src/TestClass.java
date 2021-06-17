@@ -15,6 +15,9 @@ public class TestClass
     */
    public static void main(String[] args)
    {
+      //clear the terminal window
+      System.out.print('\u000C');
+      
       //delclare variables 
       String strStart;
       String strPlayAgain; 
