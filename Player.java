@@ -23,6 +23,15 @@ public class Player
   private int intHealth;
   private int intATK;
   
+  //constructor for the player class
+  player(String s, int h, int ATK)
+  {
+    
+    this.strName = s;
+    this.intHealth = h;
+    this.intATK = ATK; 
+  }
+  
   //declare variables for random numbers 
   int randHPBuff;
   int randATKBuff;
