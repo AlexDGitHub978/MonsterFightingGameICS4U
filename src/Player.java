@@ -24,14 +24,14 @@ public class Player
   private int intATK = 35;
 
   //constructor for the player class
-  player(String s, int h, int ATK)
+  Player(String s, int h, int ATK)
   {
     this.strName = s;
     this.intHealth = h;
     this.intATK = ATK;
   }
 
-  player()
+  Player()
   {
     this.strName = "Unknown";
     this.intHealth = 0;

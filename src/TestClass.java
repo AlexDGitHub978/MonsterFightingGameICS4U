@@ -45,7 +45,7 @@ public class TestClass
                System.out.println("NEW GAME");
              
                //create a new game 
-               new Game(); 
+               new MonsterFightingGame();
             
                //loop that asks the user to play again
               

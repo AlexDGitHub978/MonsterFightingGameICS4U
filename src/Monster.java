@@ -16,7 +16,7 @@ public class Monster
     //instance variables
 
     //static variable that holds the number of monster instances created
-    private static intMonsterNum = 0;
+    private static int intMonsterNum = 0;
 
     //variables that holds the monsters health and damage
     private int intHealth, intDamage;
@@ -93,7 +93,7 @@ public class Monster
         int intRandNum = 0;
 
         //A string that will hold the strength of the monster,adjective of the monster, and type of monster
-        String strMonsterStrength, strMonsterAdjective, strMonsterType;
+        String strMonsterStrength = null, strMonsterAdjective, strMonsterType;
 
         if (this.intHealth < 85) {
             strMonsterStrength = "Weak ";
@@ -107,12 +107,12 @@ public class Monster
         //This is the array that holds the adjectives that describe the monster
         String[] strAdjectives = {"Vengeful ", " Enraged ", " Adorable ", " Annoying ", " Tired ", " Happy ", " Funny ", " Ridiculous ", " Depressed", "Depraved"};
 
-        strMonsterAdjective = strAdjectives[Math.random() * 10];
+        strMonsterAdjective = strAdjectives[(int) (Math.random() * 10)];
 
         //This is the array that holds the name of the monster
         String[] strMonsterNames = {"Ogre", "Serpent", "Troll", "Hydra", "Minotaur", "Zombie", "Skeleton", "Creeper", "Dragon", "Vampire", "Witch", "Wizard", "Sorcerer"};
 
-        strMonsterType = strMonsterNames[Math.random() * 13];
+        strMonsterType = strMonsterNames[(int) (Math.random() * 13)];
 
 
         this.strName = strMonsterStrength + strMonsterAdjective + strMonsterType;
