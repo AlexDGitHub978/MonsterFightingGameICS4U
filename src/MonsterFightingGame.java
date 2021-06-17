@@ -130,7 +130,72 @@ public class MonsterFightingGame
             bolTutorial = false;
         }
     }
+    
+    /**
+     * Description: This method asks the user how many monsters they would
+     * like to fight. It then creates that many monster instances in an array.
+     *
+     * @author Alexander Duong
+     * @version 2021-06-16
+     *
+     */
+    public void userMonsters()
+    {
 
+        //byte that holds user input
+        byte bytUserInput = 0;
+
+
+        //boolean that controls the dowhile input loop
+        boolean bolUserInput = true;
+
+        //ask the user how many monsters they would like to fight
+        System.out.println("How many monsters would you like to fight?");
+
+        //add a do while loop to loop the try and catch block
+        do
+        {
+            //add the try and catch block
+            try
+            {
+                //populate bytUserInput and parse to byte
+                bytUserInput = new Scanner(System.in).nextByte();
+
+                //check if the input is at least 1
+                if(bytUserInput > 0)
+                {
+                    //reset bolUserInput to false to break out of the loop
+                    bolUserInput = false;
+                }
+                else
+                {
+                    //output error message
+                    System.out.println("Error. Please enter a number more than 0.");
+
+                    //set bolUserInput to true to loop again
+                    bolUserInput = true;
+                }
+            }
+            catch(Exception e)
+            {
+                //output error message
+                System.out.println("Error. Please enter a non-decimal number.");
+
+                //set bolUserInput to true to loop again
+                bolUserInput = true;
+            }
+        }while(bolUserInput);
+
+        //initialize the monsters array
+        monsters = new Monster[bytUserInput];
+
+        //use a for loop to create the monster instances and put them in the array
+        for(int i = 0; i < monsters.length; i ++)
+        {
+            //create the monster instances by calling the default constructor
+            monsters[i] = new Monster();
+        }
+    }
 
     /**
      * Description: This method is meant to run the game itself
@@ -210,176 +275,7 @@ public class MonsterFightingGame
         printResults(boolPlayerDead, intMonstersDefeated, intRoundsPlayed);
 
     }
-
-    /**
-     * Description: This method outputs the result of the match into a file
-     *
-     * @author John Khalife
-     * @version 2021-06-16
-     *
-     */
-    public void printResults(boolean boolPlayerDead, int intMonstersDefeated, int intRoundsPlayed) {
-
-
-        //outputting a small amount of info about the game to the user
-        System.out.println("Well played, " + player.getstrName() + "!");
-
-
-        System.out.println("This was game #" + intGameNum);
-        if (boolPlayerDead) {
-            System.out.println("You fought " + intMonstersDefeated + " monsters out of " + monsters.length + "!");
-        } else {
-            System.out.println("You defeated " + intMonstersDefeated + " monsters!");
-        }
-
-        System.out.println("You played " + intRoundsPlayed + " rounds!");
-        System.out.println("Your attack value at the end of the game was " + player.getintATK());
-        System.out.println("Your health value at the end of the game was " + player.getintHealth());
-
-        System.out.println("Check the text file corresponding to this game to see more statistics relating to your game!");
-
-
-        //creating a file for the information to be outputted to
-        //try catch for creating file
-        try {
-
-            //Creating file object
-            File myObj = new File("MonsterFightingGame_#" + intGameNum + ".txt");
-
-            //Checking if file has been created
-            if (myObj.createNewFile()) {
-                System.out.println("Created file " + myObj.getName());
-            }
-
-            //If error is caught - trace the source
-        } catch (IOException e) {
-            System.out.println("An error occured in the creation of this file.");
-            e.printStackTrace();
-        }
-
-        //try catch for writing to file
-        try {
-
-            //creating filewriter object
-            FileWriter myWriter = new FileWriter("MonsterFightingGame_#" + intGameNum + ".txt");
-
-            //displaying winner
-            if (boolPlayerDead) {
-                myWriter.write("Winner: " + monsters[intMonstersDefeated - 1].getName() + "\n\n");
-            } else {
-                myWriter.write("Winner: " + this.player.getstrName() +"\n\n");
-            }
-
-            myWriter.write("Game #" + intGameNum + "\n");
-
-            if (boolPlayerDead) {
-                myWriter.write("Fought " + intMonstersDefeated + " monsters out of " + monsters.length + "\n");
-
-            } else {
-                myWriter.write("Defeated " + intMonstersDefeated + " monsters \n");
-            }
-
-
-
-
-            myWriter.write(intRoundsPlayed + " rounds played \n");
-            myWriter.write("Player attack value at end of game:" +  this.player.getintATK() + "\n");
-            myWriter.write("Player health value at end of game:" +  this.player.getintHealth() + "\n\n");
-
-
-
-
-            //displaying all monsters
-            myWriter.write("All monsters:\n\n");
-
-            //loop to print all monsters stats
-            for (int i = 0; i < monsters.length ; i++) {
-
-                myWriter.write("Monster #" + (i+1) + "\n");
-                myWriter.write("Name: " + monsters[i].getName() + "\n");
-                myWriter.write("Attack: " + monsters[i].getDamage() + "\n");
-            }
-
-            //close the writer
-            myWriter.close();
-            //error catching
-        } catch (IOException e) {
-            System.out.println("An error occured in writing the file.");
-            e.printStackTrace();
-        }
-
-
-
-
-    }
-
-
-    /**
-     * Description: This method asks the user how many monsters they would
-     * like to fight. It then creates that many monster instances in an array.
-     *
-     * @author Alexander Duong
-     * @version 2021-06-16
-     *
-     */
-    public void userMonsters()
-    {
-
-        //byte that holds user input
-        byte bytUserInput = 0;
-
-
-        //boolean that controls the dowhile input loop
-        boolean bolUserInput = true;
-
-        //ask the user how many monsters they would like to fight
-        System.out.println("How many monsters would you like to fight?");
-
-        //add a do while loop to loop the try and catch block
-        do
-        {
-            //add the try and catch block
-            try
-            {
-                //populate bytUserInput and parse to byte
-                bytUserInput = new Scanner(System.in).nextByte();
-
-                //check if the input is at least 1
-                if(bytUserInput > 0)
-                {
-                    //reset bolUserInput to false to break out of the loop
-                    bolUserInput = false;
-                }
-                else
-                {
-                    //output error message
-                    System.out.println("Error. Please enter a number more than 0.");
-
-                    //set bolUserInput to true to loop again
-                    bolUserInput = true;
-                }
-            }
-            catch(Exception e)
-            {
-                //output error message
-                System.out.println("Error. Please enter a non-decimal number.");
-
-                //set bolUserInput to true to loop again
-                bolUserInput = true;
-            }
-        }while(bolUserInput);
-
-        //initialize the monsters array
-        monsters = new Monster[bytUserInput];
-
-        //use a for loop to create the monster instances and put them in the array
-        for(int i = 0; i < monsters.length; i ++)
-        {
-            //create the monster instances by calling the default constructor
-            monsters[i] = new Monster();
-        }
-    }
-
+    
     //Battle system
     public void battle(Monster monster)
     {
@@ -502,4 +398,104 @@ public class MonsterFightingGame
             battle(monster);
         }
     }
+    
+    /**
+     * Description: This method outputs the result of the match into a file
+     *
+     * @author John Khalife
+     * @version 2021-06-16
+     *
+     */
+    public void printResults(boolean boolPlayerDead, int intMonstersDefeated, int intRoundsPlayed) {
+
+
+        //outputting a small amount of info about the game to the user
+        System.out.println("Well played, " + player.getstrName() + "!");
+
+
+        System.out.println("This was game #" + intGameNum);
+        if (boolPlayerDead) {
+            System.out.println("You fought " + intMonstersDefeated + " monsters out of " + monsters.length + "!");
+        } else {
+            System.out.println("You defeated " + intMonstersDefeated + " monsters!");
+        }
+
+        System.out.println("You played " + intRoundsPlayed + " rounds!");
+        System.out.println("Your attack value at the end of the game was " + player.getintATK());
+        System.out.println("Your health value at the end of the game was " + player.getintHealth());
+
+        System.out.println("Check the text file corresponding to this game to see more statistics relating to your game!");
+
+
+        //creating a file for the information to be outputted to
+        //try catch for creating file
+        try {
+
+            //Creating file object
+            File myObj = new File("MonsterFightingGame_#" + intGameNum + ".txt");
+
+            //Checking if file has been created
+            if (myObj.createNewFile()) {
+                System.out.println("Created file " + myObj.getName());
+            }
+
+            //If error is caught - trace the source
+        } catch (IOException e) {
+            System.out.println("An error occured in the creation of this file.");
+            e.printStackTrace();
+        }
+
+        //try catch for writing to file
+        try {
+
+            //creating filewriter object
+            FileWriter myWriter = new FileWriter("MonsterFightingGame_#" + intGameNum + ".txt");
+
+            //displaying winner
+            if (boolPlayerDead) {
+                myWriter.write("Winner: " + monsters[intMonstersDefeated - 1].getName() + "\n\n");
+            } else {
+                myWriter.write("Winner: " + this.player.getstrName() +"\n\n");
+            }
+
+            myWriter.write("Game #" + intGameNum + "\n");
+
+            if (boolPlayerDead) {
+                myWriter.write("Fought " + intMonstersDefeated + " monsters out of " + monsters.length + "\n");
+
+            } else {
+                myWriter.write("Defeated " + intMonstersDefeated + " monsters \n");
+            }
+
+
+
+
+            myWriter.write(intRoundsPlayed + " rounds played \n");
+            myWriter.write("Player attack value at end of game:" +  this.player.getintATK() + "\n");
+            myWriter.write("Player health value at end of game:" +  this.player.getintHealth() + "\n\n");
+
+
+
+
+            //displaying all monsters
+            myWriter.write("All monsters:\n\n");
+
+            //loop to print all monsters stats
+            for (int i = 0; i < monsters.length ; i++) {
+
+                myWriter.write("Monster #" + (i+1) + "\n");
+                myWriter.write("Name: " + monsters[i].getName() + "\n");
+                myWriter.write("Attack: " + monsters[i].getDamage() + "\n");
+            }
+
+            //close the writer
+            myWriter.close();
+            //error catching
+        } catch (IOException e) {
+            System.out.println("An error occured in writing the file.");
+            e.printStackTrace();
+        }
+
+    }
+    
 }
