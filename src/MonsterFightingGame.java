@@ -196,7 +196,7 @@ public class MonsterFightingGame
 
             //checking if the player has been defeated
             if(boolPlayerDead) {
-                System.out.println( "Better luck next time!");
+                System.out.println("Better luck next time!");
                 i = monsters.length;
             } else {
                 //deciding if the player gets a health or shield buff
@@ -411,8 +411,8 @@ public class MonsterFightingGame
                 monster.takeDamage(this.player.getintATK());
 
                 //output damage message
-                System.out.println("You used Quick Slice! Dealt " + this.player.getintATK() + " damage to the monster!");
-                System.out.println("The Monster uses Quick Slice! Dealt " + monster.getDamage() + " damage to you!");
+                System.out.println("You used Quick Slice! Dealt " + this.player.getintATK() + "damage to the monster!");
+                System.out.println("The Monster uses Quick Slice! Dealt " + monster.getDamage() + "damage to you!");
             }
             //monster used Shield Bash
             else if(monsterMove == 1)
@@ -421,7 +421,7 @@ public class MonsterFightingGame
                 this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The Monster uses Shield Bash! Blocking you Quick Slice and Dealt " + monster.getDamage() + " damage to you!");
+                System.out.println("The Monster uses Shield Bash! Blocking you Quick Slice and Dealt " + monster.getDamage() + "damage to you!");
             }
             //monster used Mighty Slam
             else if(monsterMove == 2)
@@ -443,13 +443,13 @@ public class MonsterFightingGame
                 monster.takeDamage(player.getintATK());
 
                 //output damage message
-                System.out.println("You used Shield Bash! Blocking the monster's Quick Slice and Dealt " + this.player.getintATK() + "damage to the monster!");
+                System.out.println("You used Shield Bash! Blocking the monster's Quick Slice and Dealt " + this.player.getintATK() + " damage to the monster!");
             }
             //monster used Shield Bash
             else if(monsterMove == 1)
             {
                 //output damage message
-                System.out.println("You used Shield Bash! Coliding with the monster's Shield Bash, no damage taken!");
+                System.out.println("You used Shield Bash! Colliding with the monster's Shield Bash, no damage taken!");
             }
             //monster used Mighty Slam
             else if(monsterMove == 2)
