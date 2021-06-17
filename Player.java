@@ -114,7 +114,7 @@ public class Player
 
   //Vincent *
   //create a method to buff the player's health by a random value
-  public static void PlayerHPBuff(int health)
+  public static void PlayerHPBuff()
   {
       //create a random number for buff
       int randHPBuff = (int) ((Math.random()*6) +1) *10;
@@ -127,7 +127,7 @@ public class Player
   }
 
   //create a method that increases the players strength by a random value with potions
-  public static void PlayerATKBuff(int ATK)
+  public static void PlayerATKBuff()
   {
       //create a random number for the strength
       int randATKBuff = (int) ((Math.random()*6)+1) *2;
