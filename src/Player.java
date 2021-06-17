@@ -25,7 +25,7 @@ public class Player
 
 
   //default constructor
-  player()
+  Player()
   {
     name();
   }
@@ -111,11 +111,7 @@ public class Player
     {
        bolEmpty = false;
     }
-    while(bolEmpty);
-
-
-
-  }
+  }while(bolEmpty);
 
   //Vincent *
   //create a method to buff the player's health by a random value
