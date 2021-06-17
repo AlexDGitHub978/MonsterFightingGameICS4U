@@ -4,7 +4,7 @@
  * monsters they want to fight, and does the battles. It will
  * output the results to a file at the end of each game.
  *
- * @author John Khalife, Alexander Duong, and Vincent Zhu
+ * @author John Khalife, Alexander Duong, Vincent Zhu, and Karim Al-Bukhari
  * @version 2021-06-16
  *
  */
