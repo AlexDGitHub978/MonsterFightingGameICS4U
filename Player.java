@@ -82,12 +82,6 @@ public class Player
     { 
       return this.intATK; 
     }
-
-    //get method for players health
-    public int getintHealth() 
-    {
-      return this.intHealth;
-    }
   
   //create method that asks the user for there name
   public void name()
