@@ -198,12 +198,11 @@ public class MonsterFightingGame
             if(boolPlayerDead) {
                 System.out.println("Better luck next time!");
                 i = monsters.length;
-            } else {
+            } 
+            else {
                 //deciding if the player gets a health or shield buff
                 this.player.PlayerATKBuff();
                 this.player.PlayerHPBuff();
-
-
             }
 
         }
