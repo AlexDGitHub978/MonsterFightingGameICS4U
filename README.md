@@ -18,11 +18,11 @@
 
 
 #### Target Demographic:
-> Ideally children, but the game can be played by anyone who can read
-> The game is meant for entertainment
-> The game will be advertised to children
-> recommended to ages 6 - 10
-> E for everyone (ages 6 and up) 
+> - Ideally children, but the game can be played by anyone who can read
+> - The game is meant for entertainment
+> - The game will be advertised to children
+> - recommended to ages 6 - 10
+> - E for everyone (ages 6 and up) 
 
 
 
