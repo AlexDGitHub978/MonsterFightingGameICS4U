@@ -23,16 +23,11 @@ public class Player
   private int intHealth = 100;
   private int intATK = 35;
 
-  //constructor for the player class
-  player(String s, int h, int ATK)
-  {
-    this.strName = s;
-    this.intHealth = h;
-    this.intATK = ATK;
-  }
-
+ 
+  //default constructor 
   player()
   {
+    game(); 
     this.strName = "Unknown";
     this.intHealth = 0;
     this.intATK = 0;
@@ -60,16 +55,8 @@ public class Player
       return this.intHealth();
   }
 
-  /*
-   * Atchya Nandan, I am creating a method that uses health and sets the base value to 100
-  */
 
-  
-    /*
-     * Atchya Nandan, I am creating a name method that asks the
-     * user for their name and then sets the name in the
-     * instance variable
-     */
+
 
     /**
      * Description: This is a get method that returns the attack value of the player class
@@ -78,14 +65,25 @@ public class Player
      * @version 2021-06-16
      *
      */
-    public int getintATK() 
-    { 
-      return this.intATK; 
+    public int getIntATK() { return this.intATK; }
+
+    //get method for players health
+    public int getintHealth() {
+        return this.intHealth();
     }
+
+ /*
+     * Atchya Nandan, I am creating a name method that asks the
+     * user for their name and then sets the name in the
+     * instance variable and if else statemtn for guest users or empty spaces
+     */
   
   //create method that asks the user for there name
   public void name()
   {
+    boolean bolEmpty = false; 
+      
+     do{
 
       //ask the user for enter name
       System.out.println("****************");
@@ -93,7 +91,31 @@ public class Player
       System.out.println("****************");
 
       //use the scanner to get name
-      this.strName = new Scanner(System.in).nextLine();
+      this.strPlayer = new Scanner(System.in).nextLine();
+
+    if(this.strPlayer.isEmpty())
+    {
+      System.out.println("You are guest");
+      this.strPlayer = "GUEST"; 
+      bolEmpty = false; 
+      
+    }
+    
+    else if(this.strPlayer.trim().isEmpty())
+    {
+        System.out.println("Please Enter A Name");
+        bolEmpty = true; 
+       
+    }
+    else 
+    {
+       bolEmpty = false; 
+      
+    } 
+    while(bolEmpty); 
+   
+    
+
   }
 
   //Vincent *
@@ -104,7 +126,7 @@ public class Player
       int randHPBuff = (int) ((Math.random()*6) +1) *10;
 
       //add random number to health value
-      this.inthealth += randHPBuff;
+      health += randHPBuff;
 
       //print message notifiying player incrase of Health stats
       System.out.println("you've got a health potion! your health has increased "+ randHPBuff);
@@ -117,7 +139,7 @@ public class Player
       int randATKBuff = (int) ((Math.random()*6)+1) *2;
 
       //add random number to the health
-      this.intATK += randATKBuff;
+      ATK += randATKBuff;
 
       //print message notifiying player incrase of ATK stats
       System.out.println("you've recieved a strength potion! your health has increased "+ randATKBuff);
