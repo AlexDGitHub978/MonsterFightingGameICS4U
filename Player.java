@@ -120,7 +120,7 @@ public class Player
       int randHPBuff = (int) ((Math.random()*6) +1) *10;
 
       //add random number to health value
-      health += randHPBuff;
+      this.inthealth += randHPBuff;
 
       //print message notifiying player incrase of Health stats
       System.out.println("you've got a health potion! your health has increased "+ randHPBuff);
@@ -133,7 +133,7 @@ public class Player
       int randATKBuff = (int) ((Math.random()*6)+1) *2;
 
       //add random number to the health
-      ATK += randATKBuff;
+      this.intATK += randATKBuff;
 
       //print message notifiying player incrase of ATK stats
       System.out.println("you've recieved a strength potion! your health has increased "+ randATKBuff);
