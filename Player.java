@@ -54,16 +54,7 @@ public class Player
       return this.strName(); 
   }
   
-   /*
-   * Atchya Nandan, I am creating a set method for the name 
-  */
-  
-  //set method for players name
-  public void setstrName(String s)
-  {
-      this.strName = s; 
-  }
-  
+ 
   /*
    * Atchya Nandan, I am creating a method that uses health and sets the base value to 100 
   */
@@ -117,10 +108,8 @@ public class Player
       System.out.println("****************"); 
       
       //use the scanner to get name 
-      strPlayerName = new Scanner(System.in).nextLine(); 
+      strPlayer = new Scanner(System.in).nextLine(); 
       
-      //set the users name with set method 
-      name.setstrName(strPlayerName); 
       
   } 
   
