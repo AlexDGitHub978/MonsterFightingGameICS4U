@@ -39,9 +39,6 @@ public class Player
     
   }
   
-  //declare variables for random numbers 
-  int randHPBuff;
-  int randATKBuff;
   
   /*
    * Atchya Nandan, I am creating a method for players name 
@@ -95,10 +92,10 @@ public class Player
   
   //Vincent *
   //create a method to buff the player's health by a random value
-  public static void PlayerHPBuff(int health, int randHPBuff)
+  public static void PlayerHPBuff(int health)
   {
       //create a random number for buff
-      randHPBuff = (int) ((Math.random()*6) +1) *10;
+      int randHPBuff = (int) ((Math.random()*6) +1) *10;
       
       //add random number to health value 
       health += randHPBuff;
@@ -108,10 +105,10 @@ public class Player
   }
 
   //create a method that increases the players strength by a random value with potions 
-  public static void PlayerATKBuff(int ATK, int randATKBuff)
+  public static void PlayerATKBuff(int ATK)
   {
       //create a random number for the strength 
-      randATKBuff = (int) ((Math.random()*6)+1) *2;
+      int randATKBuff = (int) ((Math.random()*6)+1) *2;
       
       //add random number to the health 
       ATK += randATKBuff;
