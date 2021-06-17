@@ -34,7 +34,7 @@ public class Player
   //get method for players name 
   public String getstrName()
   {
-      return this.getstrName(); 
+      return this.strName(); 
   }
   
    /*
@@ -48,25 +48,25 @@ public class Player
   }
   
   /*
-   * Atchya Nandan, I am creating a method that uses health and sets the base value to 70 
+   * Atchya Nandan, I am creating a method that uses health and sets the base value to 100 
   */
   
   //create a method that gets the health of the player and reutns the health
   public void health()
   {
-      //sets the base value of the health to 70
-      this.intHealth = 70; 
+      //sets the base value of the health to 100
+      this.intHealth = 100; 
   }
   
   /*
-  * Atchya Nandan, I am creating a method that uses ATK and sets the base value to 20
+  * Atchya Nandan, I am creating a method that uses ATK and sets the base value to 35
   */
   
-   //create method that sets ATK to 20
+   //create method that sets ATK to 35
   public void ATK()
   {
-      //sets the base value of ATK to 20 
-      this.intATK = 20; 
+      //sets the base value of ATK to 35 
+      this.intATK = 35; 
   }
   
   /*
@@ -76,12 +76,12 @@ public class Player
   //get method for players health 
   public int getintHealth()
   {
-      return this.getintHealth(); 
+      return this.intHealth(); 
   }
   
     /*
    * Atchya Nandan, I am creating a name method that asks the
-   * user fort there name and then sets the name in the
+   * user for their name and then sets the name in the
    * instance variable 
   */
 
@@ -91,7 +91,7 @@ public class Player
       //declare variable for the players name 
       String strPlayerName;
       
-      //declare a variable of type person
+      //declare a variable of type Player
       Player name = new Player(); 
       
       //ask the user for enter name
@@ -109,7 +109,7 @@ public class Player
   
   //Vincent *
   //create a method to buff the player's health by a random value
-  public static void PlayerHPBuff(int health,int randHPBuff)
+  public static void PlayerHPBuff(int health, int randHPBuff)
   {
       //create a random number for buff
       randHPBuff = (int) ((Math.random()*6) +1) *10;
