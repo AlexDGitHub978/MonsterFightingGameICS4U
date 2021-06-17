@@ -27,7 +27,7 @@ public class MonsterFightingGame
     //static variable that counts the number of game instances created
     private static int intGameNum = 0;
 
-    //static variable that holds whether or not the boolean
+    //static variable that holds whether or not the player should be asked for the tutorial
     private static boolean bolTutorial = true;
 
 
@@ -150,7 +150,7 @@ public class MonsterFightingGame
                 } else if (monsters[i].getHealth() <= 0) {
                     //moving on to the next monster and informing the user
                     boolMonsterBattle = false;
-                    System.out.println( "The " + monsters.getName() + " has been defeated!");
+                    System.out.println( "The " + monsters[i].getName() + " has been defeated!");
                 }
 
 
@@ -230,7 +230,7 @@ public class MonsterFightingGame
             if (boolPlayerDead) {
                 myWriter.write("Winner: " + monsters[intMonstersDefeated - 1].getName() + "\n\n");
             } else {
-                myWriter.write("Winner: " + player.getstrName() +"\n\n");
+                myWriter.write("Winner: " + this.player.getstrName() +"\n\n");
             }
 
             myWriter.write("Game #" + intGameNum + "\n");
@@ -246,8 +246,8 @@ public class MonsterFightingGame
 
 
             myWriter.write(intRoundsPlayed + " rounds played \n");
-            myWriter.write("Player attack value at end of game:" +  player.getintATK() + "\n");
-            myWriter.write("Player health value at end of game:" +  player.getintHealth() + "\n\n");
+            myWriter.write("Player attack value at end of game:" +  this.player.getintATK() + "\n");
+            myWriter.write("Player health value at end of game:" +  this.player.getintHealth() + "\n\n");
 
 
 
@@ -344,7 +344,7 @@ public class MonsterFightingGame
     }
 
     //Battle system
-    public static void battle(Player player, Monster monster)
+    public void battle(Monster monster)
     {
         //variables to store player/moster move
         String playerMove;
@@ -368,31 +368,31 @@ public class MonsterFightingGame
             if(monsterMove == 0 )
             {
                 //player damaged
-                player.intHealth -= monster.intDamage;
+                this.player.takeDamage(monster.getDamage());
                 //monster damaged
-                monster.intHealth -= player.intATK;
+                monster.takeDamage(this.player.getintATK());
 
                 //output damage message
-                System.out.println("You used Quick Slice! Dealt " + player.intATK + "damage to the monster!");
-                System.out.println("The Monster uses Quick Slice! Dealt " + monster.intDamage + "damage to you!");
+                System.out.println("You used Quick Slice! Dealt " + this.player.getintATK() + "damage to the monster!");
+                System.out.println("The Monster uses Quick Slice! Dealt " + monster.getDamage() + "damage to you!");
             }
             //monster used Shield Bash
             else if(monsterMove == 1)
             {
                 //player damaged
-                player.intHealth -= monster.intDamage;
+                this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The Monster uses Shield Bash! Blocking you Quick Slice and Dealt " + monster.intDamage + "damage to you!");
+                System.out.println("The Monster uses Shield Bash! Blocking you Quick Slice and Dealt " + monster.getDamage() + "damage to you!");
             }
             //monster used Mighty Slam
             else if(monsterMove == 2)
             {
                 //monster damaged
-                monster.intHealth -= player.intATK;
+                monster.takeDamage(player.getintATK());
 
                 //output damage message
-                System.out.println("You used Quick Slice! Dodging the monster's Mighty Slam and Dealt " + player.intATK + "damage to the monster!");
+                System.out.println("You used Quick Slice! Dodging the monster's Mighty Slam and Dealt " + this.player.getintATK() + "damage to the monster!");
             }
         }
         //possiable reactions when player used Shield Bash
@@ -402,10 +402,10 @@ public class MonsterFightingGame
             if(monsterMove == 0 )
             {
                 //monster damaged
-                monster.intHealth -= player.intATK;
+                monster.takeDamage(player.getintATK());
 
                 //output damage message
-                System.out.println("You used Shield Bash! Blocking the monster's Quick Slice and Dealt " + player.intATK + "damage to the monster!");
+                System.out.println("You used Shield Bash! Blocking the monster's Quick Slice and Dealt " + this.player.getintATK() + "damage to the monster!");
             }
             //monster used Shield Bash
             else if(monsterMove == 1)
@@ -417,10 +417,10 @@ public class MonsterFightingGame
             else if(monsterMove == 2)
             {
                 //player damaged
-                player.intHealth -= monster.intDamage;
+                this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The monster used Mighty Slam penetrating your shield bash and Dealt " + monster.intDamgage + "damage to the monster!");
+                System.out.println("The monster used Mighty Slam penetrating your shield bash and Dealt " + monster.getDamage() + "damage to the monster!");
             }
         }
 
@@ -431,38 +431,38 @@ public class MonsterFightingGame
             if(monsterMove == 0)
             {
                 //player damaged
-                player.intHealth -= monster.intDamage;
+                this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The monster used Quick Slice to dodge your Mighty Slam! Dealing" + player.intATK + "damage to you!");
+                System.out.println("The monster used Quick Slice to dodge your Mighty Slam! Dealing" + this.player.getintATK() + "damage to you!");
             }
             //monster used Shield Bash
             else if(monsterMove == 1)
             {
                 //monster damaged
-                monster.intHealth -= player.intATK;
+                monster.takeDamage(this.player.getintATK());
 
                 //output damage message
-                System.out.println("You used Mighty Slam to penetrate through the monster's Shield Bash! Dealing" + player.intATK + "damage to the monster!");
+                System.out.println("You used Mighty Slam to penetrate through the monster's Shield Bash! Dealing" + this.player.getintATK() + "damage to the monster!");
             }
             //monster used Mighty Slam
             else if(monsterMove == 2)
             {
                 //player damaged
-                player.intHealth -= monster.intDamgage;
+                this.player.takeDamage(monster.getDamage());
                 //monster damaged
-                monster.intHealth -= player.intATK;
+                monster.takeDamage(this.player.getintATK());
 
                 //output damage message
-                System.out.println("You used Mighty Slam! Dealing" + player.intATK + "damage to the monster!");
-                System.out.println("The monster used Mighty Slam! Dealing" + monster.intDamgage + "damage to you!");
+                System.out.println("You used Mighty Slam! Dealing" + this.player.getintATK() + "damage to the monster!");
+                System.out.println("The monster used Mighty Slam! Dealing" + monster.getDamage() + "damage to you!");
             }
         }
         //restart method if player entered wrong input
         else
         {
             System.out.println("What is this absurd move? Please enter \n Quick Slice  /  Shield Bash  /  Mighty Slam");
-            battle(player,monster);
+            battle(monster);
         }
     }
 }

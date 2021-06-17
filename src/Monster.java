@@ -7,11 +7,11 @@
  */
 
 //importing library for random number
+
 import java.lang.Math;
 
 //declaring the monster class
-public class Monster 
-{
+public class Monster {
 
     //instance variables
 
@@ -36,7 +36,7 @@ public class Monster
         monsterName();
         intMonsterNum++;
     }
-    
+
     /*
      * Description: These are get methods for the private
      * static and instance variables storing the number of
@@ -47,26 +47,18 @@ public class Monster
      * @version 2021-06-15
      *
      */
-    public int getMonsterNum() 
-    {
+    public int getMonsterNum() {
         return intMonsterNum;
     }
 
-    public String getName() 
-    {
+    public String getName() {
         return this.strName;
     }
 
-    public int getHealth() 
-    {
+    public int getHealth() {
         return this.intHealth;
     }
 
-    public int getDamage() 
-    {
-        return this.intDamage;
-    }
-    
     /*
      * Description: This is the set method to update
      * the health of the monster.
@@ -75,9 +67,12 @@ public class Monster
      * @version 2021-06-15
      *
      */
-    public void setHealth(int health)
-    {
+    public void setHealth(int health) {
         this.intHealth = health;
+    }
+
+    public int getDamage() {
+        return this.intDamage;
     }
 
     /**
@@ -129,8 +124,7 @@ public class Monster
      * @version 2021-06-15
      *
      */
-    public void monsterHealth() 
-    {
+    public void monsterHealth() {
         this.intHealth = 70 + intMonsterNum * 5;
     }
 
@@ -144,8 +138,7 @@ public class Monster
      * @version 2021-06-15
      *
      */
-    public void monsterDamage() 
-    {
+    public void monsterDamage() {
         this.intDamage = 20 + intMonsterNum * 2;
     }
 
@@ -158,5 +151,16 @@ public class Monster
     public void resetMonster() {
         intMonsterNum = 0;
     }
+
+    /**
+     * Description: This is a method that subtracts a damage value from the health of the monster
+     *
+     * @author John Khalife
+     * @version 2021-06-16
+     */
+    public void takeDamage(int intPlayerDamage) {
+        this.intHealth -= intPlayerDamage;
+    }
+
 }
 
