@@ -49,7 +49,15 @@ public class TestClass
             
                //loop that asks the user to play again
               
-               //Karim Al-Bukhari
+               /**
+               * Description: This is asks the user if they would like to play again
+               * If the user enters "Y" then it will play again.
+               * If the user enters "N" then it exits.
+               * If the user does not enter "Y" or "N" the Try and catch method will prompt the user to enter a valid input
+               * @author Karim Al-Bukhari
+               * @version 2021-06-16
+               *
+               */
                do 
                {
                   //ask the user to play again 
@@ -77,7 +85,7 @@ public class TestClass
                }while(bolPlayAgain);
             }while(bolAgain); 
              
-             // Karmim Al-Bukhari *
+             // Karim Al-Bukhari *
           }
           
          /*
