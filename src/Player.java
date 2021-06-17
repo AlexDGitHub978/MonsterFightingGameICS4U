@@ -23,20 +23,11 @@ public class Player
   private int intHealth = 100;
   private int intATK = 35;
 
-  //constructor for the player class
-  Player(String s, int h, int ATK)
-  {
-    this.strName = s;
-    this.intHealth = h;
-    this.intATK = ATK;
-  }
 
-  Player()
+  //default constructor
+  player()
   {
-    this.strName = "Unknown";
-    this.intHealth = 0;
-    this.intATK = 0;
-
+    name();
   }
 
 
@@ -60,11 +51,8 @@ public class Player
       return this.intHealth();
   }
 
-  /*
-   * Atchya Nandan, I am creating a method that uses health and sets the base value to 100
-  */
 
-  
+
     /*
      * Atchya Nandan, I am creating a name method that asks the
      * user for their name and then sets the name in the
@@ -82,10 +70,19 @@ public class Player
     { 
       return this.intATK; 
     }
-  
+
+ /*
+     * Atchya Nandan, I am creating a name method that asks the
+     * user for their name and then sets the name in the
+     * instance variable and if else statemtn for guest users or empty spaces
+     */
+
   //create method that asks the user for there name
   public void name()
   {
+    boolean bolEmpty = false;
+
+     do{
 
       //ask the user for enter name
       System.out.println("****************");
@@ -93,12 +90,36 @@ public class Player
       System.out.println("****************");
 
       //use the scanner to get name
-      this.strName = new Scanner(System.in).nextLine();
+      this.strPlayer = new Scanner(System.in).nextLine();
+
+    if(this.strPlayer.isEmpty())
+    {
+       System.out.println("You are guest");
+       this.strPlayer = "GUEST";
+       bolEmpty = false;
+
+    }
+
+    else if(this.strPlayer.trim().isEmpty())
+    {
+       System.out.println("You are guest");
+       this.strPlayer = "GUEST";
+       bolEmpty = false;
+
+    }
+    else
+    {
+       bolEmpty = false;
+    }
+    while(bolEmpty);
+
+
+
   }
 
   //Vincent *
   //create a method to buff the player's health by a random value
-  public static void PlayerHPBuff(int health)
+  public static void PlayerHPBuff()
   {
       //create a random number for buff
       int randHPBuff = (int) ((Math.random()*6) +1) *10;
@@ -111,7 +132,7 @@ public class Player
   }
 
   //create a method that increases the players strength by a random value with potions
-  public static void PlayerATKBuff(int ATK)
+  public static void PlayerATKBuff()
   {
       //create a random number for the strength
       int randATKBuff = (int) ((Math.random()*6)+1) *2;
