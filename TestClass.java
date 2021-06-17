@@ -17,7 +17,7 @@ public class TestClass
    {
       //delclare variables 
       String strStart;
-      String strplayAgain; 
+      String strPlayAgain; 
       boolean bolTryAgain = false;
       boolean bolAgain = false;
       boolean bolPlayAgain = false; 
@@ -56,14 +56,14 @@ public class TestClass
                   System.out.println("Do you want to play again [Y/N]?");
             
                   //use the scanner for play again
-                  strplayAgain = new Scanner(System.in).nextLine();
+                  strPlayAgain = new Scanner(System.in).nextLine();
                   
-                  if (strplayAgain.equalsIgnoreCase("Y"))
+                  if (strPlayAgain.equalsIgnoreCase("Y"))
                   {
                      bolPlayAgain=false;
                      bolAgain = true; 
                   }
-                  else if (strplayAgain.equalsIgnoreCase("N"))
+                  else if (strPlayAgain.equalsIgnoreCase("N"))
                   {
                      bolPlayAgain=false;
                      bolAgain = false;
