@@ -27,11 +27,7 @@ public class Player
   //default constructor 
   player()
   {
-    game(); 
-    this.strName = "Unknown";
-    this.intHealth = 0;
-    this.intATK = 0;
-
+    name();
   }
 
 
@@ -65,11 +61,9 @@ public class Player
      * @version 2021-06-16
      *
      */
-    public int getIntATK() { return this.intATK; }
-
-    //get method for players health
-    public int getintHealth() {
-        return this.intHealth();
+    public int getintATK() 
+    { 
+      return this.intATK; 
     }
 
  /*
@@ -95,22 +89,22 @@ public class Player
 
     if(this.strPlayer.isEmpty())
     {
-      System.out.println("You are guest");
-      this.strPlayer = "GUEST"; 
-      bolEmpty = false; 
+       System.out.println("You are guest");
+       this.strPlayer = "GUEST"; 
+       bolEmpty = false; 
       
     }
     
     else if(this.strPlayer.trim().isEmpty())
     {
-        System.out.println("Please Enter A Name");
-        bolEmpty = true; 
+       System.out.println("You are guest");
+       this.strPlayer = "GUEST"; 
+       bolEmpty = false; 
        
     }
     else 
     {
-       bolEmpty = false; 
-      
+       bolEmpty = false;
     } 
     while(bolEmpty); 
    
