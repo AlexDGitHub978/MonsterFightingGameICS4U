@@ -95,7 +95,7 @@ public class Monster {
         String strMonsterStrength, strMonsterAdjective, strMonsterType;
 
         if (this.intHealth < 85) {
-            strMonsterStrength = "WeaK ";
+            strMonsterStrength = "Weak ";
         } else if (this.intHealth < 100) {
             strMonsterStrength = "Average ";
         } else if (this.intHealth >= 100) {
