@@ -389,10 +389,10 @@ public class MonsterFightingGame
         int monsterMove;
 
         //randomize monster move
-        monsterMove=(int)(Math.random()*2);
+        monsterMove = (int)(Math.random()*2);
         /* monsterMove 0 = Quick Slice
          * monsterMove 1 = Shield Bash
-         * monsterMove 3 = Mighty Slam
+         * monsterMove 2 = Mighty Slam
          */
 
         //prompt the user to enter their move
