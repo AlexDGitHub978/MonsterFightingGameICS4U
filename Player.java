@@ -96,8 +96,6 @@ public class Player
   //create method that asks the user for there name
   public void name()
   {
-      //declare variable for the players name 
-      String strPlayerName;
       
       //declare a variable of type Player
       Player name = new Player(); 
@@ -108,7 +106,7 @@ public class Player
       System.out.println("****************"); 
       
       //use the scanner to get name 
-      strPlayer = new Scanner(System.in).nextLine(); 
+      this.strPlayer = new Scanner(System.in).nextLine(); 
       
       
   } 
