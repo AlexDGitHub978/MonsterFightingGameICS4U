@@ -9,92 +9,62 @@
  */
 
 //import java Scanner
-
 import java.util.Scanner;
 
 //import java math
-import java.lang.Math;
+import java.lang.Math; 
+public class Player
+{
+  /*
+   * Atchya Nandan, I am creating instance variable right here. 
+   */
+  //declare instance variables
+  private String strName;
+  private int intHealth = 100;
+  private int intATK = 35;
 
-public class Player {
-    //declare variables for random numbers
-    int randHPBuff;
-    int randATKBuff;
-    /*
-     * Atchya Nandan, I am creating instance variable right here.
-     */
-    //declare instance variables
-    private String strName;
-    private int intHealth;
-    private int intATK;
+  //constructor for the player class
+  player(String s, int h, int ATK)
+  {
+    this.strName = s;
+    this.intHealth = h;
+    this.intATK = ATK;
+  }
 
-    /*
-     * Atchya Nandan, I am creating a method for players name
-     */
+  player()
+  {
+    this.strName = "Unknown";
+    this.intHealth = 0;
+    this.intATK = 0;
 
-    //Vincent *
-    //create a method to buff the player's health by a random value
-    public static void PlayerHPBuff(int health, int randHPBuff) {
-        //create a random number for buff
-        randHPBuff = (int) ((Math.random() * 6) + 1) * 10;
+  }
 
-        //add random number to health value
-        health += randHPBuff;
 
-        //print message notifiying player incrase of Health stats
-        System.out.println("you've got a health potion! your health has increased " + randHPBuff);
-    }
+  /*
+   * Atchya Nandan, I am creating a method for players name
+  */
 
-    /*
-     * Atchya Nandan, I am creating a set method for the name
-     */
+  //get method for players name
+  public String getstrName()
+  {
+      return this.strName();
+  }
 
-    //create a method that increases the players strength by a random value with potions
-    public static void PlayerATKBuff(int ATK, int randATKBuff) {
-        //create a random number for the strength
-        randATKBuff = (int) ((Math.random() * 6) + 1) * 2;
+   /*
+  * Atchya Nandan, I am creating a get method for the health
+  */
 
-        //add random number to the health
-        ATK += randATKBuff;
+  //get method for players health
+  public int getintHealth()
+  {
+      return this.intHealth();
+  }
 
-        //print message notifiying player incrase of ATK stats
-        System.out.println("you've recieved a strength potion! your health has increased " + randATKBuff);
+  /*
+   * Atchya Nandan, I am creating a method that uses health and sets the base value to 100
+  */
 
-    }
-
-    /*
-     * Atchya Nandan, I am creating a method that uses health and sets the base value to 100
-     */
-
-    //get method for players name
-    public String getstrName() {
-        return this.strName();
-    }
-
-    /*
-     * Atchya Nandan, I am creating a method that uses ATK and sets the base value to 35
-     */
-
-    //set method for players name
-    public void setstrName(String s) {
-        this.strName = s;
-    }
-
-    //create a method that gets the health of the player and reutns the health
-    public void health() {
-        //sets the base value of the health to 100
-        this.intHealth = 100;
-    }
-
-    /*
-     * Atchya Nandan, I am creating a get method for the health
-     */
-
-    //create method that sets ATK to 35
-    public void ATK() {
-        //sets the base value of ATK to 35
-        this.intATK = 35;
-    }
-
+  
     /*
      * Atchya Nandan, I am creating a name method that asks the
      * user for their name and then sets the name in the
@@ -135,6 +105,52 @@ public class Player {
         name.setstrName(strPlayerName);
 
     }
+  //create method that asks the user for there name
+  public void name()
+  {
+
+      //declare a variable of type Player
+      game name = new game();
+
+      //ask the user for enter name
+      System.out.println("****************");
+      System.out.println("Enter your name");
+      System.out.println("****************");
+
+      //use the scanner to get name
+      this.strPlayer = new Scanner(System.in).nextLine();
+
+
+
+  }
+
+  //Vincent *
+  //create a method to buff the player's health by a random value
+  public static void PlayerHPBuff(int health)
+  {
+      //create a random number for buff
+      int randHPBuff = (int) ((Math.random()*6) +1) *10;
+
+      //add random number to health value
+      health += randHPBuff;
+
+      //print message notifiying player incrase of Health stats
+      System.out.println("you've got a health potion! your health has increased "+ randHPBuff);
+  }
+
+  //create a method that increases the players strength by a random value with potions
+  public static void PlayerATKBuff(int ATK)
+  {
+      //create a random number for the strength
+      int randATKBuff = (int) ((Math.random()*6)+1) *2;
+
+      //add random number to the health
+      ATK += randATKBuff;
+
+      //print message notifiying player incrase of ATK stats
+      System.out.println("you've recieved a strength potion! your health has increased "+ randATKBuff);
+
+  }
 }
 
 //Vincent *
