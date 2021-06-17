@@ -129,6 +129,8 @@ public class Player {
           System.out.println("you've got a health potion! your health has increased " + randHPBuff);
       }
 
+  }
+
       //create a method that increases the players strength by a random value with potions
       public void PlayerATKBuff() {
 
