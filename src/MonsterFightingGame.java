@@ -403,8 +403,8 @@ public class MonsterFightingGame {
             }
 
             myWriter.write(intRoundsPlayed + " rounds played \n");
-            myWriter.write("Player attack value at end of game:" + this.player.getintATK() + "\n");
-            myWriter.write("Player health value at end of game:" + this.player.getintHealth() + "\n\n");
+            myWriter.write("Player attack value at end of game: " + this.player.getintATK() + "\n");
+            myWriter.write("Player health value at end of game: " + this.player.getintHealth() + "\n\n");
 
             //displaying all monsters
             myWriter.write("All monsters:\n\n");
