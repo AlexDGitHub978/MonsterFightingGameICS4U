@@ -99,8 +99,11 @@ public class Player {
         }
     }
 
-    //Vincent *
-    //create a method to buff the player's health by a random value
+
+      /* @Description: create a method to buff the player's health by a random value
+      * @Name: Vincent Zhu
+      *@ Version:2021/6/18
+     */
     public void PlayerHPBuff() {
 
 
@@ -119,8 +122,11 @@ public class Player {
         }
 
     }
-
-    //create a method that increases the players strength by a random value with potions
+     
+      /* @Description: create a method to buff the player's strength by a random value
+      * @Name: Vincent Zhu
+      *@ Version:2021/6/18
+     */
     public void PlayerATKBuff() {
 
         int intBuffChance = (int) Math.random() * 4 + 1;
