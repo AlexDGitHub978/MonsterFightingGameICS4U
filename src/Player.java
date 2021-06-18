@@ -17,22 +17,20 @@ import java.lang.Math;
 
 public class Player {
     /*
-     * Atchya Nandan, I am creating instance variable right here.
+     * Atchya Nandan, I am creating instance variables right here.
      */
     //declare instance variables
     private String strName;
     private int intHealth = 100;
     private int intATK = 35;
 
-
     //default constructor
     Player() {
         name();
     }
 
-
     /*
-     * Atchya Nandan, I am creating a method for players name
+     * Atchya Nandan, I am creating a get method for the player's name
      */
 
     //get method for players name
@@ -48,14 +46,6 @@ public class Player {
     public int getintHealth() {
         return this.intHealth;
     }
-
-
-
-    /*
-     * Atchya Nandan, I am creating a name method that asks the
-     * user for their name and then sets the name in the
-     * instance variable
-     */
 
     /**
      * Description: This is a get method that returns the attack value of the player class
@@ -77,15 +67,11 @@ public class Player {
         this.intHealth -= intMonsterDamage;
     }
 
-
-
-
     /*
      * Atchya Nandan, I am creating a name method that asks the
      * user for their name and then sets the name in the
-     * instance variable and if else statemtn for guest users or empty spaces
+     * instance variable with if else statements for guest users
      */
-
     public void name()
     {
         //ask the user for enter name
@@ -126,7 +112,7 @@ public class Player {
           this.intHealth += randHPBuff;
 
           //print message notifiying player incrase of Health stats
-          System.out.println("you've got a health potion! your health has increased " + randHPBuff);
+          System.out.println("You've got a health potion! Your health has increased by " + randHPBuff);
       }
 
   }
@@ -147,7 +133,6 @@ public class Player {
               //print message notifiying player incrase of ATK stats
               System.out.println("You've received a strength potion! Your strength has increased by " + randATKBuff);
           }
-
       }
   }
 
