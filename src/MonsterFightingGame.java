@@ -227,8 +227,6 @@ public class MonsterFightingGame {
                     bolMonsterBattle = false;
                     System.out.println("The " + monsters[i].getName() + " has been defeated!");
                 }
-
-
             }
 
             //adding one to the number of monsters defeated
@@ -243,11 +241,9 @@ public class MonsterFightingGame {
                 this.player.PlayerATKBuff();
                 this.player.PlayerHPBuff();
             }
-
         }
 
         printResults(bolPlayerDead, intMonstersDefeated, intRoundsPlayed);
-
     }
 
     //Battle system
