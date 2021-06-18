@@ -58,9 +58,6 @@ public class MonsterFightingGame
         runGame();
     }
 
-
-
-
     /**
      * Description: This method asks the user once whether they would
      * like a tutorial. If they do, it will output the instructions.
@@ -330,7 +327,7 @@ public class MonsterFightingGame
                 System.out.println("You used Quick Slice! Dodging the " + monster.getName() + "'s Mighty Slam and dealing " + this.player.getintATK() + " damage to the monster!");
             }
         }
-        //possiable reactions when player used Shield Bash
+        //possible reactions when player used Shield Bash
         else if (playerMove.equalsIgnoreCase("Shield Bash"))
         {
             //monster used Quick Slice
@@ -465,19 +462,14 @@ public class MonsterFightingGame
             if (bolPlayerDead) {
                 myWriter.write("Fought " + intMonstersDefeated + " monsters out of " + monsters.length + "\n");
 
-            } else {
+            } 
+            else {
                 myWriter.write("Defeated " + intMonstersDefeated + " monsters \n");
             }
-
-
-
 
             myWriter.write(intRoundsPlayed + " rounds played \n");
             myWriter.write("Player attack value at end of game:" +  this.player.getintATK() + "\n");
             myWriter.write("Player health value at end of game:" +  this.player.getintHealth() + "\n\n");
-
-
-
 
             //displaying all monsters
             myWriter.write("All monsters:\n\n");
@@ -493,11 +485,10 @@ public class MonsterFightingGame
             //close the writer
             myWriter.close();
             //error catching
-        } catch (IOException e) {
+        } 
+        catch (IOException e) {
             System.out.println("An error occured in writing the file.");
             e.printStackTrace();
         }
-
-    }
-    
+    } 
 }
