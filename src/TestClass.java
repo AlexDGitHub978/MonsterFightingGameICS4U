@@ -78,6 +78,7 @@ public class TestClass
                   }
                   else if (strPlayAgain.equalsIgnoreCase("N"))
                   {
+                     System.out.println("Exit");
                      bolPlayAgain=false;
                      bolAgain = false;
                      bolTryAgain = false; 
