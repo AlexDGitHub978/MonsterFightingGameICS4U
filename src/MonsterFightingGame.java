@@ -246,7 +246,14 @@ public class MonsterFightingGame {
         printResults(bolPlayerDead, intMonstersDefeated, intRoundsPlayed);
     }
 
-    //Battle system
+/**
+     * Description: This method is the battling method that includes the main controls of the game
+     and decides how different actions have different response to the player & monster's health.
+     *
+     * @author Vincent Zhu
+     * @version 2021-06-18
+     *
+     */
     public void battle(Monster monster) {
         //variables to store player/moster move
         String playerMove;
