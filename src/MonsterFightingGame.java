@@ -6,54 +6,50 @@
  *
  * @author John Khalife, Alexander Duong, Vincent Zhu, and Karim Al-Bukhari
  * @version 2021-06-16
- *
  */
 //import Scanner class
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 //declaring the monster class
-public class MonsterFightingGame
-{
-
-    //array that holds all the monsters
-    private Monster[] monsters;
-
-    //player object
-    private Player player;
+public class MonsterFightingGame {
 
     //static variable that counts the number of game instances created
     private static int intGameNum = 0;
-
     //static variable that holds whether or not the player should be asked for the tutorial
     private static boolean bolTutorial = true;
+    //array that holds all the monsters
+    private Monster[] monsters;
+    //player object
+    private final Player player;
 
- /**
- * Description: This is the default constructor.
- * It calls the game tutorial to see if you are in tutorial mode
- * It creates a new player
- * It creates new monsters
- * and then it starts the game
- * @author Karim Al-Bukhari
- * @version 2021-06-16
- *
- */
-    public MonsterFightingGame(){
-        
+    /**
+     * Description: This is the default constructor.
+     * It calls the game tutorial to see if you are in tutorial mode
+     * It creates a new player
+     * It creates new monsters
+     * and then it starts the game
+     * @author Karim Al-Bukhari
+     * @version 2021-06-16
+     *
+     */
+    public MonsterFightingGame() {
+
         //Call the tutorial method.
         gameTutorial();
 
         //adding one to the number of monster instances
         intGameNum++;
-        
+
         //Calling the default constructor of the player
         player = new Player();
-        
+
         //Call the user monsters method
         userMonsters();
-        
+
         //Call the rungame method
         runGame();
     }
@@ -66,8 +62,7 @@ public class MonsterFightingGame
      * @version 2021-06-16
      *
      */
-    public void gameTutorial()
-    {
+    public void gameTutorial() {
 
         //boolean that controls the try catch loop for use input
         boolean bolUserInput = true;
@@ -77,22 +72,19 @@ public class MonsterFightingGame
 
         //check if the user has already
         //seen the tutorial
-        if(bolTutorial == true)
-        {
+        if (bolTutorial == true) {
             //ask the user if they would like to see
             //the tutorial
             System.out.println("Would you like a tutorial?");
             System.out.println("Please enter yes or no");
 
             //add a do while loop to check for valid user input
-            do
-            {
+            do {
                 //populate strUserInput
                 strUserInput = new Scanner(System.in).nextLine();
 
                 //check if the user input is valid
-                if(strUserInput.equalsIgnoreCase("yes"))
-                {
+                if (strUserInput.equalsIgnoreCase("yes")) {
                     //output the instructions
                     System.out.println("This is a single player game.");
                     System.out.println("Enter your name and choose how many monsters you want to fight!");
@@ -109,28 +101,24 @@ public class MonsterFightingGame
 
                     //reset bolUserInput to false to break out of the loop
                     bolUserInput = false;
-                }
-                else if(strUserInput.equalsIgnoreCase("no"))
-                {
+                } else if (strUserInput.equalsIgnoreCase("no")) {
                     //reset bolUserInput to false to break out of the loop
                     bolUserInput = false;
-                }
-                else
-                {
+                } else {
                     //output error message
                     System.out.println("Error. Please enter yes or no.");
 
                     //set bolUserInput to true to loop again
                     bolUserInput = true;
                 }
-            }while(bolUserInput);
+            } while (bolUserInput);
 
             //set bolTutorial to false to not ask the user
             //more than once
             bolTutorial = false;
         }
     }
-    
+
     /**
      * Description: This method asks the user how many monsters they would
      * like to fight. It then creates that many monster instances in an array.
@@ -139,8 +127,7 @@ public class MonsterFightingGame
      * @version 2021-06-16
      *
      */
-    public void userMonsters()
-    {
+    public void userMonsters() {
 
         //byte that holds user input
         byte bytUserInput = 0;
@@ -153,45 +140,37 @@ public class MonsterFightingGame
         System.out.println("How many monsters would you like to fight?");
 
         //add a do while loop to loop the try and catch block
-        do
-        {
+        do {
             //add the try and catch block
-            try
-            {
+            try {
                 //populate bytUserInput and parse to byte
                 bytUserInput = new Scanner(System.in).nextByte();
 
                 //check if the input is at least 1
-                if(bytUserInput > 0)
-                {
+                if (bytUserInput > 0) {
                     //reset bolUserInput to false to break out of the loop
                     bolUserInput = false;
-                }
-                else
-                {
+                } else {
                     //output error message
                     System.out.println("Error. Please enter a number more than 0.");
 
                     //set bolUserInput to true to loop again
                     bolUserInput = true;
                 }
-            }
-            catch(Exception e)
-            {
+            } catch (Exception e) {
                 //output error message
                 System.out.println("Error. Please enter a non-decimal number.");
 
                 //set bolUserInput to true to loop again
                 bolUserInput = true;
             }
-        }while(bolUserInput);
+        } while (bolUserInput);
 
         //initialize the monsters array
         monsters = new Monster[bytUserInput];
 
         //use a for loop to create the monster instances and put them in the array
-        for(int i = 0; i < monsters.length; i ++)
-        {
+        for (int i = 0; i < monsters.length; i++) {
             //create the monster instances by calling the default constructor
             monsters[i] = new Monster();
         }
@@ -219,16 +198,16 @@ public class MonsterFightingGame
         int intRoundsPlayed = 0;
 
         //For loop that iterates through the array of monsters
-        for(int i = 0 ; i < monsters.length ; i++) {
+        for (int i = 0; i < monsters.length; i++) {
 
-            System.out.println("Battle #" + (i+1) + "!");
+            System.out.println("Battle #" + (i + 1) + "!");
             System.out.println("Your opponent is a " + monsters[i].getName() + ".");
             System.out.println("Your attack is " + player.getintATK() + ".");
             System.out.println("The monster's attack is " + monsters[i].getDamage() + ".");
 
             //this is the while loop that will control individual monster battles
             bolMonsterBattle = true;
-            while(bolMonsterBattle) {
+            while (bolMonsterBattle) {
 
 
                 //outputting the status of the battle
@@ -249,21 +228,20 @@ public class MonsterFightingGame
                 } else if (monsters[i].getHealth() <= 0) {
                     //moving on to the next monster and informing the user
                     bolMonsterBattle = false;
-                    System.out.println( "The " + monsters[i].getName() + " has been defeated!");
+                    System.out.println("The " + monsters[i].getName() + " has been defeated!");
                 }
 
 
             }
 
             //adding one to the number of monsters defeated
-            intMonstersDefeated ++;
+            intMonstersDefeated++;
 
             //checking if the player has been defeated
-            if(bolPlayerDead) {
+            if (bolPlayerDead) {
                 System.out.println("Better luck next time!");
                 i = monsters.length;
-            } 
-            else {
+            } else {
                 //deciding if the player gets a health or shield buff
                 this.player.PlayerATKBuff();
                 this.player.PlayerHPBuff();
@@ -274,16 +252,15 @@ public class MonsterFightingGame
         printResults(bolPlayerDead, intMonstersDefeated, intRoundsPlayed);
 
     }
-    
+
     //Battle system
-    public void battle(Monster monster)
-    {
+    public void battle(Monster monster) {
         //variables to store player/moster move
         String playerMove;
         int monsterMove;
 
         //randomize monster move
-        monsterMove = (int)(Math.random() * 3);
+        monsterMove = (int) (Math.random() * 3);
         /* monsterMove 0 = Quick Slice
          * monsterMove 1 = Shield Bash
          * monsterMove 2 = Mighty Slam
@@ -291,14 +268,12 @@ public class MonsterFightingGame
 
         //prompt the user to enter their move
         System.out.println("Your next move will be:\n Quick Slice  /  Shield Bash  /  Mighty Slam");
-        playerMove= new Scanner(System.in).nextLine();
+        playerMove = new Scanner(System.in).nextLine();
 
         //possible reactions when player used quick slice
-        if (playerMove.equalsIgnoreCase("Quick Slice"))
-        {
+        if (playerMove.equalsIgnoreCase("Quick Slice")) {
             //monster used Quick Slice
-            if(monsterMove == 0 )
-            {
+            if (monsterMove == 0) {
                 //player damaged
                 this.player.takeDamage(monster.getDamage());
                 //monster damaged
@@ -309,8 +284,7 @@ public class MonsterFightingGame
                 System.out.println("The " + monster.getName() + " uses Quick Slice! Dealing " + monster.getDamage() + " damage to you!");
             }
             //monster used Shield Bash
-            else if(monsterMove == 1)
-            {
+            else if (monsterMove == 1) {
                 //player damaged
                 this.player.takeDamage(monster.getDamage());
 
@@ -318,8 +292,7 @@ public class MonsterFightingGame
                 System.out.println("The " + monster.getName() + " uses Shield Bash! Blocking your Quick Slice and dealing " + monster.getDamage() + " damage to you!");
             }
             //monster used Mighty Slam
-            else if(monsterMove == 2)
-            {
+            else if (monsterMove == 2) {
                 //monster damaged
                 monster.takeDamage(player.getintATK());
 
@@ -328,11 +301,9 @@ public class MonsterFightingGame
             }
         }
         //possible reactions when player used Shield Bash
-        else if (playerMove.equalsIgnoreCase("Shield Bash"))
-        {
+        else if (playerMove.equalsIgnoreCase("Shield Bash")) {
             //monster used Quick Slice
-            if(monsterMove == 0 )
-            {
+            if (monsterMove == 0) {
                 //monster damaged
                 monster.takeDamage(player.getintATK());
 
@@ -340,14 +311,12 @@ public class MonsterFightingGame
                 System.out.println("You used Shield Bash! Blocking the " + monster.getName() + "'s Quick Slice and dealing " + this.player.getintATK() + " damage to the monster!");
             }
             //monster used Shield Bash
-            else if(monsterMove == 1)
-            {
+            else if (monsterMove == 1) {
                 //output damage message
                 System.out.println("You used Shield Bash! Colliding with the " + monster.getName() + "'s Shield Bash, no damage taken!");
             }
             //monster used Mighty Slam
-            else if(monsterMove == 2)
-            {
+            else if (monsterMove == 2) {
                 //player damaged
                 this.player.takeDamage(monster.getDamage());
 
@@ -357,11 +326,9 @@ public class MonsterFightingGame
         }
 
         //possible reactions when player used Mighty Slam
-        else if (playerMove.equalsIgnoreCase("Mighty Slam"))
-        {
+        else if (playerMove.equalsIgnoreCase("Mighty Slam")) {
             //monster used Quick Slice
-            if(monsterMove == 0)
-            {
+            if (monsterMove == 0) {
                 //player damaged
                 this.player.takeDamage(monster.getDamage());
 
@@ -369,8 +336,7 @@ public class MonsterFightingGame
                 System.out.println("The " + monster.getName() + " used Quick Slice to dodge your Mighty Slam! Dealing " + monster.getDamage() + " damage to you!");
             }
             //monster used Shield Bash
-            else if(monsterMove == 1)
-            {
+            else if (monsterMove == 1) {
                 //monster damaged
                 monster.takeDamage(this.player.getintATK());
 
@@ -378,8 +344,7 @@ public class MonsterFightingGame
                 System.out.println("You used Mighty Slam to penetrate through the " + monster.getName() + "'s Shield Bash! Dealing " + this.player.getintATK() + " damage to the monster!");
             }
             //monster used Mighty Slam
-            else if(monsterMove == 2)
-            {
+            else if (monsterMove == 2) {
                 //player damaged
                 this.player.takeDamage(monster.getDamage());
                 //monster damaged
@@ -391,13 +356,12 @@ public class MonsterFightingGame
             }
         }
         //restart method if player entered wrong input
-        else
-        {
+        else {
             System.out.println("What is this absurd move? Please enter \n Quick Slice  /  Shield Bash  /  Mighty Slam");
             battle(monster);
         }
     }
-    
+
     /**
      * Description: This method outputs the result of the match into a file
      *
@@ -454,7 +418,7 @@ public class MonsterFightingGame
             if (bolPlayerDead) {
                 myWriter.write("Winner: " + monsters[intMonstersDefeated - 1].getName() + "\n\n");
             } else {
-                myWriter.write("Winner: " + this.player.getstrName() +"\n\n");
+                myWriter.write("Winner: " + this.player.getstrName() + "\n\n");
             }
 
             myWriter.write("Game #" + intGameNum + "\n");
@@ -462,33 +426,32 @@ public class MonsterFightingGame
             if (bolPlayerDead) {
                 myWriter.write("Fought " + intMonstersDefeated + " monsters out of " + monsters.length + "\n");
 
-            } 
-            else {
+            } else {
                 myWriter.write("Defeated " + intMonstersDefeated + " monsters \n");
             }
 
             myWriter.write(intRoundsPlayed + " rounds played \n");
-            myWriter.write("Player attack value at end of game:" +  this.player.getintATK() + "\n");
-            myWriter.write("Player health value at end of game:" +  this.player.getintHealth() + "\n\n");
+            myWriter.write("Player attack value at end of game:" + this.player.getintATK() + "\n");
+            myWriter.write("Player health value at end of game:" + this.player.getintHealth() + "\n\n");
 
             //displaying all monsters
             myWriter.write("All monsters:\n\n");
 
             //loop to print all monsters stats
-            for (int i = 0; i < monsters.length ; i++) {
+            for (int i = 0; i < monsters.length; i++) {
 
-                myWriter.write("Monster #" + (i+1) + "\n");
+                myWriter.write("Monster #" + (i + 1) + "\n");
                 myWriter.write("Name: " + monsters[i].getName() + "\n");
                 myWriter.write("Attack: " + monsters[i].getDamage() + "\n");
+                myWriter.write("Health at the end of the game: " + monsters[i].getHealth() + "\n");
             }
 
             //close the writer
             myWriter.close();
             //error catching
-        } 
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println("An error occured in writing the file.");
             e.printStackTrace();
         }
-    } 
+    }
 }

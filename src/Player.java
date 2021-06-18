@@ -72,8 +72,7 @@ public class Player {
      * user for their name and then sets the name in the
      * instance variable with if else statements for guest users
      */
-    public void name()
-    {
+    public void name() {
         //ask the user for enter name
         System.out.println("************************************");
         System.out.println("Enter your name.");
@@ -83,58 +82,54 @@ public class Player {
         //use the scanner to get name
         this.strName = new Scanner(System.in).nextLine();
 
-        if(this.strName.isEmpty())
-        {
+        if (this.strName.isEmpty()) {
             System.out.println("You are guest.");
             this.strName = "GUEST";
-        }
-
-        else if(this.strName.trim().isEmpty())
-        {
+        } else if (this.strName.trim().isEmpty()) {
             System.out.println("You are guest.");
             this.strName = "GUEST";
         }
     }
 
-  //Vincent *
-  //create a method to buff the player's health by a random value
-  public void PlayerHPBuff() {
+    //Vincent *
+    //create a method to buff the player's health by a random value
+    public void PlayerHPBuff() {
 
 
-      //create a random number for buff
-      int randHPBuff = (int) ((Math.random() * 6) + 1) * 10;
+        //create a random number for buff
+        int randHPBuff = (int) ((Math.random() * 6) + 1) * 10;
 
-      int intBuffChance = (int) Math.random() * 4 + 1;
+        int intBuffChance = (int) Math.random() * 4 + 1;
 
 
-      if (intBuffChance == 1) {
-          //add random number to health value
-          this.intHealth += randHPBuff;
+        if (intBuffChance == 1) {
+            //add random number to health value
+            this.intHealth += randHPBuff;
 
-          //print message notifiying player incrase of Health stats
-          System.out.println("You've got a health potion! Your health has increased by " + randHPBuff);
-      }
+            //print message notifiying player incrase of Health stats
+            System.out.println("You've got a health potion! Your health has increased by " + randHPBuff);
+        }
 
-  }
+    }
 
-      //create a method that increases the players strength by a random value with potions
-      public void PlayerATKBuff() {
+    //create a method that increases the players strength by a random value with potions
+    public void PlayerATKBuff() {
 
-          int intBuffChance = (int) Math.random() * 4 + 1;
+        int intBuffChance = (int) Math.random() * 4 + 1;
 
-          //create a random number for the strength
-          int randATKBuff = (int) ((Math.random() * 6) + 1) * 2;
+        //create a random number for the strength
+        int randATKBuff = (int) ((Math.random() * 6) + 1) * 2;
 
-          if (intBuffChance == 1) {
+        if (intBuffChance == 1) {
 
-              //add random number to the health
-              this.intATK += randATKBuff;
+            //add random number to the health
+            this.intATK += randATKBuff;
 
-              //print message notifiying player incrase of ATK stats
-              System.out.println("You've received a strength potion! Your strength has increased by " + randATKBuff);
-          }
-      }
-  }
+            //print message notifiying player incrase of ATK stats
+            System.out.println("You've received a strength potion! Your strength has increased by " + randATKBuff);
+        }
+    }
+}
 
 
 //Vincent *
