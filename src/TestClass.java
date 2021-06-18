@@ -12,7 +12,7 @@ public class TestClass
      * variables needed starting, playing again, and all the booleans
      * for the errors catching in the loops. 
      * Name: Atchya Nandan
-       Date: Start: June 16th 2021
+     * Date: Start: June 16th 2021
              End: June 16th 2021
      */
    public static void main(String[] args)
@@ -30,7 +30,7 @@ public class TestClass
         /* Description: ask the user to play the game and either enter start or exit
          * and then it creates a new game for the user. 
          * Name: Atchya Nandan
-          Date: Start: June 16th 2021
+         * Date: Start: June 16th 2021
                  End: June 16th 2021 
      */
       //a loop that starts or exits the game 
