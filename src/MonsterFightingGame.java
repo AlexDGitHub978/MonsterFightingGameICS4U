@@ -319,7 +319,7 @@ public class MonsterFightingGame
                 this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The " + monster.getName() + " uses Shield Bash! Blocking your Quick Slice and Dealing " + monster.getDamage() + " damage to you!");
+                System.out.println("The " + monster.getName() + " uses Shield Bash! Blocking your Quick Slice and dealing " + monster.getDamage() + " damage to you!");
             }
             //monster used Mighty Slam
             else if(monsterMove == 2)
@@ -328,7 +328,7 @@ public class MonsterFightingGame
                 monster.takeDamage(player.getintATK());
 
                 //output damage message
-                System.out.println("You used Quick Slice! Dodging the " + monster.getName() + "'s Mighty Slam and Dealing " + this.player.getintATK() + " damage to the monster!");
+                System.out.println("You used Quick Slice! Dodging the " + monster.getName() + "'s Mighty Slam and dealing " + this.player.getintATK() + " damage to the monster!");
             }
         }
         //possiable reactions when player used Shield Bash
@@ -341,7 +341,7 @@ public class MonsterFightingGame
                 monster.takeDamage(player.getintATK());
 
                 //output damage message
-                System.out.println("You used Shield Bash! Blocking the " + monster.getName() + "'s Quick Slice and Dealing " + this.player.getintATK() + " damage to the monster!");
+                System.out.println("You used Shield Bash! Blocking the " + monster.getName() + "'s Quick Slice and dealing " + this.player.getintATK() + " damage to the monster!");
             }
             //monster used Shield Bash
             else if(monsterMove == 1)
@@ -356,7 +356,7 @@ public class MonsterFightingGame
                 this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The " + monster.getName() + " used Mighty Slam penetrating your shield bash and Dealing " + monster.getDamage() + " damage to the player!");
+                System.out.println("The " + monster.getName() + " used Mighty Slam penetrating your shield bash and dealing " + monster.getDamage() + " damage to the player!");
             }
         }
 
@@ -370,7 +370,7 @@ public class MonsterFightingGame
                 this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The " + monster.getName() + " used Quick Slice to dodge your Mighty Slam! Dealing " + this.player.getintATK() + " damage to you!");
+                System.out.println("The " + monster.getName() + " used Quick Slice to dodge your Mighty Slam! Dealing " + monster.getDamage() + " damage to you!");
             }
             //monster used Shield Bash
             else if(monsterMove == 1)
