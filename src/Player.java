@@ -19,7 +19,7 @@ public class Player {
       /* Description: declare variables for the player class
        * and adding a default constructor the player class 
        * Name: Atchya Nandan
-         Date: Start: June 15th 2021
+       * Date: Start: June 15th 2021
                End: June 16th 2021 
      */
     //declare instance variables
@@ -34,7 +34,7 @@ public class Player {
 
     /* Description: A get method for the users name  
      * Name: Atchya Nandan
-       Date: Start: June 15th 2021
+     * Date: Start: June 15th 2021
              End: June 15th 2021
      */
 
@@ -43,9 +43,9 @@ public class Player {
         return this.strName;
     }
 
-      /* Description: A method that returns the users health 
+    /* Description: A method that returns the users health 
      * Name: Atchya Nandan
-       Date: Start: June 15th 2021
+     * Date: Start: June 15th 2021
              End: June 15th 2021
      */
 
@@ -77,7 +77,7 @@ public class Player {
       /* Description: Asks the user to enter therre name or leave
       * the space blank to use it as a guest 
       * Name: Atchya Nandan
-       Date: Start: June 15th 2021
+      * Date: Start: June 15th 2021
              End: June 17th 2021 
      */
     public void name() {
