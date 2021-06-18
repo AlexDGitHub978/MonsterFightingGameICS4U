@@ -11,7 +11,7 @@
 #### Date of Conception: 2021-06-14
 
 #### Task performed:
-- Creates a procedurally generated turn based monster fighting game
+- Creates a procedurally generated turn-based monster fighting game
 - User vs computer
 - Based on a reskinned version of rock paper scissors
 - Fantasy themed
