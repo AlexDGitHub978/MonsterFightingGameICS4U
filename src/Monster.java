@@ -100,7 +100,7 @@ public class Monster {
         }
 
         //This is the array that holds the adjectives that describe the monster
-        String[] strAdjectives = {" Vengeful ", " Enraged ", " Adorable ", " Annoying ", " Tired ", " Happy ", " Funny ", " Ridiculous ", " Depressed", " Depraved "};
+        String[] strAdjectives = {" Vengeful ", " Enraged ", " Adorable ", " Annoying ", " Tired ", " Happy ", " Funny ", " Ridiculous ", " Depressed ", " Depraved "};
 
         strMonsterAdjective = strAdjectives[(int) (Math.random() * 10)];
 
