@@ -88,9 +88,9 @@ public class MonsterFightingGame {
                     System.out.println("This is a single player game.");
                     System.out.println("Enter your name and choose how many monsters you want to fight!");
                     System.out.println("You and each monster will be able to choose from 3 different abilities.");
-                    System.out.println("Quick slice is blocked by Shield bash, dodges Mighty Slam, and deals normal damage to Quick slice.");
-                    System.out.println("Mighty slam is dodged by Quick slice, deals high damage against Mighty slam, and breaks through Shield bash.");
-                    System.out.println("Shield bash blocks Quick slice, deals no damage against Shield bash, and is unable to block Mighty slam.");
+                    System.out.println("Quick Slice is blocked by Shield Bash, dodges Mighty Slam, and deals normal damage to Quick Slice.");
+                    System.out.println("Mighty Slam is dodged by Quick Slice, deals high damage against Mighty Slam, and breaks through Shield Bash.");
+                    System.out.println("Shield Bash blocks Quick Slice, deals no damage against Shield Bash, and is unable to block Mighty Slam.");
                     System.out.println("You will fight each monster one by one, until one of you is defeated.");
                     System.out.println("After each fight, the monsters become stronger and stronger.");
                     System.out.println("After each fight, there is a random chance you will become stronger.");
