@@ -318,7 +318,7 @@ public class MonsterFightingGame {
                 this.player.takeDamage(monster.getDamage());
 
                 //output damage message
-                System.out.println("The " + monster.getName() + " used Mighty Slam penetrating your shield bash and dealing " + monster.getDamage() + " damage to the player!");
+                System.out.println("The " + monster.getName() + " used Mighty Slam penetrating your shield bash and dealing " + monster.getDamage() + " damage to you!");
             }
         }
         //possible reactions when player used Mighty Slam
