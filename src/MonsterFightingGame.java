@@ -208,8 +208,8 @@ public class MonsterFightingGame {
             while (bolMonsterBattle) {
                 
                 //outputting the status of the battle
-                System.out.println("Your health is " + this.player.getintHealth());
-                System.out.println("The monster's health is " + monsters[i].getHealth());
+                System.out.println("Your health is " + this.player.getintHealth() + ".");
+                System.out.println("The monster's health is " + monsters[i].getHealth() + ".");
 
                 //calling the battle function and passing in the current monster that the player is fighting
                 battle(monsters[i]);
