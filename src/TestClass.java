@@ -101,8 +101,8 @@ public class TestClass
          * It allows the user to exit the game and has a boolean
          * that has the ability to catch erros. 
          * Name: Atchya Nandan
-         * Date: Start:
-                 End:
+         * Date: Start: June 16th 2021
+                 End: June 16th 2021
      */
      
          else if(strStart.equalsIgnoreCase("Exit"))
