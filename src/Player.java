@@ -16,8 +16,10 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class Player {
-    /*
-     * Atchya Nandan, I am creating instance variables right here.
+      /* Description: 
+     * Name: Atchya Nandan
+       Date: Start:
+             End:
      */
     //declare instance variables
     private String strName;
@@ -29,8 +31,10 @@ public class Player {
         name();
     }
 
-    /*
-     * Atchya Nandan, I am creating a get method for the player's name
+    /* Description: 
+     * Name: Atchya Nandan
+       Date: Start:
+             End:
      */
 
     //get method for players name
@@ -38,8 +42,10 @@ public class Player {
         return this.strName;
     }
 
-    /*
-     * Atchya Nandan, I am creating a get method for the health
+      /* Description: 
+     * Name: Atchya Nandan
+       Date: Start:
+             End:
      */
 
     //get method for players health
@@ -67,10 +73,10 @@ public class Player {
         this.intHealth -= intMonsterDamage;
     }
 
-    /*
-     * Atchya Nandan, I am creating a name method that asks the
-     * user for their name and then sets the name in the
-     * instance variable with if else statements for guest users
+      /* Description: 
+     * Name: Atchya Nandan
+       Date: Start:
+             End:
      */
     public void name() {
         //ask the user for enter name
