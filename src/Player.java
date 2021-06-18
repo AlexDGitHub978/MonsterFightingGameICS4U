@@ -16,10 +16,11 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class Player {
-      /* Description: 
-     * Name: Atchya Nandan
-       Date: Start:
-             End:
+      /* Description: declare variables for the player class
+       * and adding a default constructor the player class 
+       * Name: Atchya Nandan
+         Date: Start: June 15th 2021
+               End: June 16th 2021 
      */
     //declare instance variables
     private String strName;
@@ -31,10 +32,10 @@ public class Player {
         name();
     }
 
-    /* Description: 
+    /* Description: A get method for the users name  
      * Name: Atchya Nandan
-       Date: Start:
-             End:
+       Date: Start: June 15th 2021
+             End: June 15th 2021
      */
 
     //get method for players name
@@ -42,10 +43,10 @@ public class Player {
         return this.strName;
     }
 
-      /* Description: 
+      /* Description: A method that returns the users health 
      * Name: Atchya Nandan
-       Date: Start:
-             End:
+       Date: Start: June 15th 2021
+             End: June 15th 2021
      */
 
     //get method for players health
@@ -73,10 +74,11 @@ public class Player {
         this.intHealth -= intMonsterDamage;
     }
 
-      /* Description: 
-     * Name: Atchya Nandan
-       Date: Start:
-             End:
+      /* Description: Asks the user to enter therre name or leave
+      * the space blank to use it as a guest 
+      * Name: Atchya Nandan
+       Date: Start: June 15th 2021
+             End: June 17th 2021 
      */
     public void name() {
         //ask the user for enter name
