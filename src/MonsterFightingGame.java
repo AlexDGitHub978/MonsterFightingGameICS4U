@@ -226,9 +226,8 @@ public class MonsterFightingGame
 
             System.out.println("Battle #" + (i+1) + "!");
             System.out.println("Your opponent is a " + monsters[i].getName() + ".");
-            System.out.println("Their attack is " + monsters[i].getDamage() + ".");
-            System.out.println("Their health is "  + monsters[i].getHealth() + ".");
-            System.out.println("Your attack is " + player.getintATK());
+            System.out.println("Your attack is " + player.getintATK() + ".");
+            System.out.println("The monster's attack is " + monsters[i].getDamage() + ".");
 
             //this is the while loop that will control individual monster battles
             bolMonsterBattle = true;
