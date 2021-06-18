@@ -8,11 +8,13 @@
 import java.util.Scanner; 
 public class TestClass
 {
-   /*
-    * Atchya Nandan: Creating avariable for the user to start
-    * creating variable for them to play again
-    * Then the boolean variables catches errors 
-    */
+     /* Description: I am the main and declaring all the variables,
+     * variables needed starting, playing again, and all the booleans
+     * for the errors catching in the loops. 
+     * Name: Atchya Nandan
+       Date: Start: June 16th 2021
+             End: June 16th 2021
+     */
    public static void main(String[] args)
    {
       //clear the terminal window
@@ -25,11 +27,12 @@ public class TestClass
       boolean bolAgain = false;
       boolean bolPlayAgain = false; 
     
-     /*
-      * Atchya Nandan: asks the user if they want to start
-      * then it will go in the if else statment and create
-      * a new game that refers to the game class
-      */
+        /* Description: ask the user to play the game and either enter start or exit
+         * and then it creates a new game for the user. 
+         * Name: Atchya Nandan
+          Date: Start: June 16th 2021
+                 End: June 16th 2021 
+     */
       //a loop that starts or exits the game 
       do
       {
@@ -94,9 +97,13 @@ public class TestClass
              // Karim Al-Bukhari *
           }
           
-         /*
-         * Atchya Nadnan: The exit will exit the user and it will try again in the large loop
-         */
+         /* Description: This is the rest of the while loop
+         * It allows the user to exit the game and has a boolean
+         * that has the ability to catch erros. 
+         * Name: Atchya Nandan
+         * Date: Start:
+                 End:
+     */
      
          else if(strStart.equalsIgnoreCase("Exit"))
          {
