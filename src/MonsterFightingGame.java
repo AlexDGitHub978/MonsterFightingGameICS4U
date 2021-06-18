@@ -7,8 +7,7 @@
  * @author John Khalife, Alexander Duong, Vincent Zhu, and Karim Al-Bukhari
  * @version 2021-06-16
  */
-//import Scanner class
-
+//import classes
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -132,7 +131,6 @@ public class MonsterFightingGame {
         //byte that holds user input
         byte bytUserInput = 0;
 
-
         //boolean that controls the dowhile input loop
         boolean bolUserInput = true;
 
@@ -164,7 +162,7 @@ public class MonsterFightingGame {
                 //set bolUserInput to true to loop again
                 bolUserInput = true;
             }
-        } while (bolUserInput);
+        }while (bolUserInput);
 
         //initialize the monsters array
         monsters = new Monster[bytUserInput];
@@ -208,8 +206,7 @@ public class MonsterFightingGame {
             //this is the while loop that will control individual monster battles
             bolMonsterBattle = true;
             while (bolMonsterBattle) {
-
-
+                
                 //outputting the status of the battle
                 System.out.println("Your health is " + this.player.getintHealth());
                 System.out.println("The monster's health is " + monsters[i].getHealth());
@@ -324,7 +321,6 @@ public class MonsterFightingGame {
                 System.out.println("The " + monster.getName() + " used Mighty Slam penetrating your shield bash and dealing " + monster.getDamage() + " damage to the player!");
             }
         }
-
         //possible reactions when player used Mighty Slam
         else if (playerMove.equalsIgnoreCase("Mighty Slam")) {
             //monster used Quick Slice
@@ -372,10 +368,8 @@ public class MonsterFightingGame {
      */
     public void printResults(boolean bolPlayerDead, int intMonstersDefeated, int intRoundsPlayed) {
 
-
         //outputting a small amount of info about the game to the user
         System.out.println("Well played, " + player.getstrName() + "!");
-
 
         System.out.println("This was game #" + intGameNum);
         if (bolPlayerDead) {
