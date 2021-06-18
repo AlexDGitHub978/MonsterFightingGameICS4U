@@ -267,7 +267,7 @@ public class MonsterFightingGame {
          */
 
         //prompt the user to enter their move
-        System.out.println("Your next move will be:\n Quick Slice  /  Shield Bash  /  Mighty Slam");
+        System.out.println("Your next move will be: \nQuick Slice  /  Shield Bash  /  Mighty Slam");
         playerMove = new Scanner(System.in).nextLine();
 
         //possible reactions when player used quick slice
@@ -281,7 +281,7 @@ public class MonsterFightingGame {
 
                 //output damage message
                 System.out.println("You used Quick Slice! Dealing " + this.player.getintATK() + " damage to the monster!");
-                System.out.println("The " + monster.getName() + " uses Quick Slice! Dealing " + monster.getDamage() + " damage to you!");
+                System.out.println("The " + monster.getName() + " used Quick Slice! Dealing " + monster.getDamage() + " damage to you!");
             }
             //monster used Shield Bash
             else if (monsterMove == 1) {
@@ -356,8 +356,9 @@ public class MonsterFightingGame {
             }
         }
         //restart method if player entered wrong input
-        else {
-            System.out.println("What is this absurd move? Please enter \n Quick Slice  /  Shield Bash  /  Mighty Slam");
+        else
+        {
+            System.out.println("What is this absurd move? Please enter \nQuick Slice  /  Shield Bash  /  Mighty Slam");
             battle(monster);
         }
     }
@@ -384,29 +385,10 @@ public class MonsterFightingGame {
         }
 
         System.out.println("You played " + intRoundsPlayed + " rounds!");
-        System.out.println("Your attack value at the end of the game was " + player.getintATK());
-        System.out.println("Your health value at the end of the game was " + player.getintHealth());
+        System.out.println("Your attack value at the end of the game was " + player.getintATK() + ".");
+        System.out.println("Your health value at the end of the game was " + player.getintHealth() + ".");
 
         System.out.println("Check the text file corresponding to this game to see more statistics relating to your game!");
-
-
-        //creating a file for the information to be outputted to
-        //try catch for creating file
-        try {
-
-            //Creating file object
-            File myObj = new File("MonsterFightingGame_#" + intGameNum + ".txt");
-
-            //Checking if file has been created
-            if (myObj.createNewFile()) {
-                System.out.println("Created file " + myObj.getName());
-            }
-
-            //If error is caught - trace the source
-        } catch (IOException e) {
-            System.out.println("An error occured in the creation of this file.");
-            e.printStackTrace();
-        }
 
         //try catch for writing to file
         try {
@@ -449,9 +431,10 @@ public class MonsterFightingGame {
             //close the writer
             myWriter.close();
             //error catching
-        } catch (IOException e) {
-            System.out.println("An error occured in writing the file.");
-            e.printStackTrace();
+        } 
+        catch (IOException e) {
+           System.out.println("An error occured in writing to the file.");
+           e.printStackTrace();
         }
     }
 }
