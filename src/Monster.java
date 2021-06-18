@@ -7,6 +7,7 @@
  */
 
 //importing library for random number
+
 import java.lang.Math;
 
 //declaring the monster class
@@ -46,24 +47,16 @@ public class Monster {
      * @version 2021-06-15
      *
      */
-    public int getMonsterNum() 
-    {
+    public int getMonsterNum() {
         return intMonsterNum;
     }
 
-    public String getName() 
-    {
+    public String getName() {
         return this.strName;
     }
 
-    public int getHealth() 
-    {
+    public int getHealth() {
         return this.intHealth;
-    }
-    
-    public int getDamage() 
-    {
-        return this.intDamage;
     }
 
     /*
@@ -74,9 +67,12 @@ public class Monster {
      * @version 2021-06-15
      *
      */
-    public void setHealth(int health) 
-    {
+    public void setHealth(int health) {
         this.intHealth = health;
+    }
+
+    public int getDamage() {
+        return this.intDamage;
     }
 
     /**
@@ -128,8 +124,7 @@ public class Monster {
      * @version 2021-06-15
      *
      */
-    public void monsterHealth() 
-    {
+    public void monsterHealth() {
         this.intHealth = 70 + intMonsterNum * 5;
     }
 
@@ -143,8 +138,7 @@ public class Monster {
      * @version 2021-06-15
      *
      */
-    public void monsterDamage() 
-    {
+    public void monsterDamage() {
         this.intDamage = 20 + intMonsterNum * 2;
     }
 
